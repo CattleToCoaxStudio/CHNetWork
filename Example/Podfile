@@ -1,6 +1,8 @@
 use_frameworks!
 target 'CHNetWork_Tests' do
   pod 'CHNetWork', :path => '../'
-  
+  pod 'FMDB'
+  pod 'MJExtension', '~> 3.0.10'
+  pod 'AFNetworking'
   
 end

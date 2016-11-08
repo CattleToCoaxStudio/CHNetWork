@@ -1,0 +1,42 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - CHNetWork (0.0.1):
+    - AFNetworking
+    - FMDB
+    - MJExtension
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - MJExtension (3.0.13)
+
+DEPENDENCIES:
+  - AFNetworking
+  - CHNetWork (from `../`)
+  - FMDB
+  - MJExtension (~> 3.0.10)
+
+EXTERNAL SOURCES:
+  CHNetWork:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CHNetWork: d323777a8680714c54b83dab0563078f34ba9bfb
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+
+COCOAPODS: 0.39.0
