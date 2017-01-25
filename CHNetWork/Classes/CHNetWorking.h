@@ -10,9 +10,9 @@
 #import "CHURLResponse.h"
 #import <UIKit/UIKit.h>
 
-#define CHNetWorkingRequest(delegate,requestType,mdoelClass,isCache,requestNumber) [NetWorking ch_GetRequestWithDeleagteTarget:delegate andRequestType:requestType andClass:mdoelClass andIsPersistence:isCache andNumber:requestNumber]
+#define CHNetWorkingRequest(delegate,requestType,mdoelClass,isCache,requestNumber) [CHNetWorking ch_GetRequestWithDeleagteTarget:delegate andRequestType:requestType andClass:mdoelClass andIsPersistence:isCache andNumber:requestNumber]
 
-@class NetWorking;
+@class CHNetWorking;
 
 typedef NS_ENUM(NSInteger,NetWorkingRequestType)
 {
@@ -24,14 +24,14 @@ typedef NS_ENUM(NSInteger,NetWorkingRequestType)
 };
 @protocol NetWorkingDelegate <NSObject>
 
--(NSDictionary *)ch_paramWith:(NetWorking *)manager;
--(void)ch_requestCallAPISuccess:(NetWorking *)manager;
--(void)ch_requestCallApiFail:(NetWorking *)manager;
+-(NSDictionary *)ch_paramWith:(CHNetWorking *)manager;
+-(void)ch_requestCallAPISuccess:(CHNetWorking *)manager;
+-(void)ch_requestCallApiFail:(CHNetWorking *)manager;
 
 @end
 
 
-@interface NetWorking : NSObject
+@interface CHNetWorking : NSObject
 @property(nonatomic,weak)id<NetWorkingDelegate> delegate;
 @property(nonatomic,strong)CHURLResponse *response;
 @property(nonatomic,assign)NSInteger requestNumber;

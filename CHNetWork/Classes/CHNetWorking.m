@@ -6,7 +6,7 @@
 //  Copyright © 2016年 YCheng. All rights reserved.
 //
 
-#import "NetWorking.h"
+#import "CHNetWorking.h"
 #import "CHApiProxy.h"
 #import <MJExtension/MJExtension.h>
 #import "CTCache.h"
@@ -35,12 +35,12 @@
 
 
 
-@interface NetWorking()
+@interface CHNetWorking()
 @property(nonatomic,strong)NSMutableArray *requestIdList;
 @property(nonatomic,assign)BOOL isNativeDataEmpty;
 @property(nonatomic,strong)CTCache *cache;
 @end
-@implementation NetWorking
+@implementation CHNetWorking
 
 -(void)dealloc
 {

@@ -11,21 +11,37 @@
 
 @interface CHApiProxy()
 @property(nonatomic,strong)AFHTTPSessionManager *sessionManager;
+@property (nonatomic,retain) AFURLSessionManager *urlSessionManager;
 @property(nonatomic,strong)NSMutableDictionary *TaskTable;
 @end
 @implementation CHApiProxy
 -(AFHTTPSessionManager *)sessionManager
 {
     if (!_sessionManager) {
-       _sessionManager = [AFHTTPSessionManager manager];
-       _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-       _sessionManager.securityPolicy.allowInvalidCertificates = NO;
-       _sessionManager.securityPolicy.validatesDomainName = NO;
-        _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        _sessionManager = [AFHTTPSessionManager manager];
+        
+        _sessionManager.securityPolicy.allowInvalidCertificates = NO;
+        _sessionManager.securityPolicy.validatesDomainName = NO;
+        _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/javascript",@"text/plain",@"application/json",nil];
+        //       _sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        //        _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        
+        //        [_sessionManager.requestSerializer setValue:@"application/json, text/javascript, */*; q=0.01" forHTTPHeaderField:@"Accept"];
+        //        [_sessionManager.requestSerializer setValue:@"application/x-www-form-urlencoded;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+        //        [_sessionManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         
     }
     return _sessionManager;
 }
+
+- (AFURLSessionManager *)urlSessionManager{
+    if (!_urlSessionManager) {
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        _urlSessionManager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    }
+    return _urlSessionManager;
+}
+
 -(NSMutableDictionary *)TaskTable
 {
     if (!_TaskTable) {
@@ -93,25 +109,43 @@
 {
 
     __block NSURLSessionDataTask *dataTask =nil;
-  dataTask = [self.sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-      
-      NSNumber *requestID = @([dataTask taskIdentifier]);
-      [self.TaskTable removeObjectForKey:requestID];
-      NSData *responseData = responseObject;
-      
-      NSDictionary *responseDic = [NSJSONSerialization JSONObjectWithData:responseObject ? responseObject : [NSData data] options:NSJSONReadingMutableContainers error:nil];
-      
-      NSString *responseString = [[NSString alloc]initWithData:responseObject ? responseObject : [NSData data] encoding:NSUTF8StringEncoding];
-      if (error) {
-          CHURLResponse *CHRrsponse = [[CHURLResponse alloc]initWithResponseString:responseString requestId:requestID request:request responseData:responseData error:error];
-          NSLog(@"错误信息---->%@",error);
-          fail ? fail(CHRrsponse) : nil;
-      }else{
-          CHURLResponse *CHResponse = [[CHURLResponse alloc]initWithResponseString:responseString requestId:requestID request:request responseData:responseData status:CHURLResponseStatusSuccess];
-          NSLog(@"返回数据---->%@",responseDic);
-          success ? success(CHResponse) : nil;
-         }
-      }];
+    dataTask = [self.sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        NSNumber *requestID = @([dataTask taskIdentifier]);
+        [self.TaskTable removeObjectForKey:requestID];
+        
+        NSData *responseData = [NSData data];
+        NSDictionary *responseDic = [NSDictionary dictionary];
+        NSString *responseString = [NSString string];
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            responseData = [NSJSONSerialization dataWithJSONObject:responseObject
+                                                           options:NSJSONWritingPrettyPrinted
+                                                             error:&error];
+            responseDic = (NSDictionary *)responseObject;
+            if (! responseData) {
+                //                    NSLog(@"responseData error: %@", error);
+            } else {
+                responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+            }
+        }else{
+            responseData = responseObject;
+            responseDic = [NSJSONSerialization JSONObjectWithData:responseObject ? responseObject : [NSData data] options:NSJSONReadingMutableContainers error:nil];
+            if (! responseData) {
+                //                    NSLog(@"responseData error: %@", error);
+            } else {
+                responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+            }
+        }
+        
+        if (error){
+            CHURLResponse *CHRrsponse = [[CHURLResponse alloc]initWithResponseString:responseString requestId:requestID request:request responseData:responseData error:error];
+            NSLog(@"错误信息---->%@",error);
+            fail ? fail(CHRrsponse) : nil;
+        }else{
+            CHURLResponse *CHResponse = [[CHURLResponse alloc]initWithResponseString:responseString requestId:requestID request:request responseData:responseData status:CHURLResponseStatusSuccess];
+            NSLog(@"返回数据---->%@",responseDic);
+            success ? success(CHResponse) : nil;
+        }
+    }];
 
    NSNumber *requestID = @([dataTask taskIdentifier]);
     self.TaskTable[requestID] = dataTask;

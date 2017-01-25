@@ -43,7 +43,7 @@
     NSLog(@"请求URL---->%@",params[@"url"]);
     NSLog(@"请求参数---->%@",params[@"params"]);
     NSLog(@"请求URL+请求参数-------%@",request.URL.absoluteString);
-    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:params[@"params"] options:0 error:nil];
+//    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:params[@"params"] options:0 error:nil];
     request.requestParams = params;
 
     return request;
@@ -53,7 +53,7 @@
     [self.httpRequestSerializer setValue:[[NSUUID UUID]UUIDString] forHTTPHeaderField:@"xxx"];
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"PUT" URLString:params[@"url"] parameters:params[@"params"] error:nil];
     
-    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:params[@"params"] options:0 error:nil];
+//    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:params[@"params"] options:0 error:nil];
     request.requestParams = params[@"params"];
     
     return request;
@@ -64,7 +64,7 @@
     [self.httpRequestSerializer setValue:[[NSUUID UUID]UUIDString] forHTTPHeaderField:@"xxx"];
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"DELETE" URLString:params[@"url"] parameters:params[@"params"] error:nil];
     
-    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:params[@"params"] options:0 error:nil];
+//    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:params[@"params"] options:0 error:nil];
     request.requestParams = params[@"params"];
     
     return request;

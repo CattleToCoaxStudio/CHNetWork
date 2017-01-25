@@ -49,8 +49,8 @@
 		38E833FD1DD17A5500871E51 /* CHRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833DA1DD17A5500871E51 /* CHRequestGenerator.m */; };
 		38E833FE1DD17A5500871E51 /* CHURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833DB1DD17A5500871E51 /* CHURLResponse.h */; };
 		38E833FF1DD17A5500871E51 /* CHURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833DC1DD17A5500871E51 /* CHURLResponse.m */; };
-		38E834001DD17A5500871E51 /* NetWorking.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833DD1DD17A5500871E51 /* NetWorking.h */; };
-		38E834011DD17A5500871E51 /* NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833DE1DD17A5500871E51 /* NetWorking.m */; };
+		38E834001DD17A5500871E51 /* CHNetWorking.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833DD1DD17A5500871E51 /* CHNetWorking.h */; };
+		38E834011DD17A5500871E51 /* CHNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833DE1DD17A5500871E51 /* CHNetWorking.m */; };
 		38E834021DD17A5500871E51 /* FGGReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833DF1DD17A5500871E51 /* FGGReachability.h */; };
 		38E834031DD17A5500871E51 /* FGGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833E01DD17A5500871E51 /* FGGReachability.m */; };
 		38E834041DD17A5500871E51 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833E11DD17A5500871E51 /* Reachability.h */; };
@@ -240,8 +240,8 @@
 		38E833DA1DD17A5500871E51 /* CHRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRequestGenerator.m; sourceTree = "<group>"; };
 		38E833DB1DD17A5500871E51 /* CHURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHURLResponse.h; sourceTree = "<group>"; };
 		38E833DC1DD17A5500871E51 /* CHURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHURLResponse.m; sourceTree = "<group>"; };
-		38E833DD1DD17A5500871E51 /* NetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorking.h; sourceTree = "<group>"; };
-		38E833DE1DD17A5500871E51 /* NetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorking.m; sourceTree = "<group>"; };
+		38E833DD1DD17A5500871E51 /* CHNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHNetWorking.h; sourceTree = "<group>"; };
+		38E833DE1DD17A5500871E51 /* CHNetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHNetWorking.m; sourceTree = "<group>"; };
 		38E833DF1DD17A5500871E51 /* FGGReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGGReachability.h; sourceTree = "<group>"; };
 		38E833E01DD17A5500871E51 /* FGGReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGGReachability.m; sourceTree = "<group>"; };
 		38E833E11DD17A5500871E51 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -554,8 +554,8 @@
 				38E833DA1DD17A5500871E51 /* CHRequestGenerator.m */,
 				38E833DB1DD17A5500871E51 /* CHURLResponse.h */,
 				38E833DC1DD17A5500871E51 /* CHURLResponse.m */,
-				38E833DD1DD17A5500871E51 /* NetWorking.h */,
-				38E833DE1DD17A5500871E51 /* NetWorking.m */,
+				38E833DD1DD17A5500871E51 /* CHNetWorking.h */,
+				38E833DE1DD17A5500871E51 /* CHNetWorking.m */,
 				38E833DF1DD17A5500871E51 /* FGGReachability.h */,
 				38E833E01DD17A5500871E51 /* FGGReachability.m */,
 				38E833E11DD17A5500871E51 /* Reachability.h */,
@@ -814,7 +814,7 @@
 				38E833EF1DD17A5500871E51 /* NSObject+AXNetworkingMethods.h in Headers */,
 				38E834041DD17A5500871E51 /* Reachability.h in Headers */,
 				38E833F91DD17A5500871E51 /* CHNetworkingConfiguration.h in Headers */,
-				38E834001DD17A5500871E51 /* NetWorking.h in Headers */,
+				38E834001DD17A5500871E51 /* CHNetWorking.h in Headers */,
 				38E833E71DD17A5500871E51 /* CTCachedObject.h in Headers */,
 				38E834021DD17A5500871E51 /* FGGReachability.h in Headers */,
 				38E833E91DD17A5500871E51 /* NSArray+AXNetworkingMethods.h in Headers */,
@@ -1001,7 +1001,7 @@
 				38E833EE1DD17A5500871E51 /* NSMutableString+AXNetworkingMethods.m in Sources */,
 				38E833E61DD17A5500871E51 /* CTCache.m in Sources */,
 				38E833F81DD17A5500871E51 /* CHApiProxy.m in Sources */,
-				38E834011DD17A5500871E51 /* NetWorking.m in Sources */,
+				38E834011DD17A5500871E51 /* CHNetWorking.m in Sources */,
 				38E833F41DD17A5500871E51 /* NSURLRequest+CTNetworkingMethods.m in Sources */,
 				38E834051DD17A5500871E51 /* Reachability.m in Sources */,
 			);
