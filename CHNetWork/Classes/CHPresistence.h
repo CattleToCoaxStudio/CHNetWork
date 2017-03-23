@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 #import "FMDB.h"
 @interface CHPresistence : NSObject
-@property(nonatomic,strong)FMDatabase *chBase;
+@property(nonatomic,strong) FMDatabase *chBase;
 +(instancetype)shardInstance;
 -(void)creaeTable;
 -(void)insertWiht:(NSString*)key andData:(NSData*)data;
@@ -14,4 +14,9 @@
 -(void)upDataWithKey:(NSString *)key andData:(NSData *)data;
 -(void)deleteWithKey:(NSString *)key;
 -(void)insertToWiht:(NSString *)key andData:(NSData *)data;
+
+/**
+ 清空持久化数据
+ */
+-(void)deleteTableAllData;
 @end

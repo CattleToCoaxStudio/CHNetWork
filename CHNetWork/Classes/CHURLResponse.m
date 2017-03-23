@@ -45,7 +45,12 @@
     self = [super init];
     if (self) {
         self.contentString = responseString;
-        self.content = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:NULL];
+        if (responseData) {
+            self.content = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:NULL];
+            
+        } else {
+            self.content = nil;
+        }
         self.status = status;
         self.request = request;
         self.requestId = [requestId integerValue];
@@ -81,7 +86,7 @@
         }
         return status;
     }else{
-    return CHURLResponseStatusSuccess;
+        return CHURLResponseStatusSuccess;
     }
 }
 @end

@@ -15,6 +15,8 @@ typedef void(^ApiCallBack)(CHURLResponse *response);
 -(NSURLSessionDataTask*)callPOSTwithParams:(NSDictionary*)params success:(ApiCallBack)success fail:(ApiCallBack)fail;
 -(NSURLSessionDataTask*)callPUTwithParams:(NSDictionary*)params success:(ApiCallBack)success fail:(ApiCallBack)fail;
 -(NSURLSessionDataTask*)callDELETEwithParams:(NSDictionary*)params success:(ApiCallBack)success fail:(ApiCallBack)fail;
+-(NSURLSessionDataTask*)callUploadFilewithParams:(NSDictionary*)params success:(ApiCallBack)success fail:(ApiCallBack)fail;
+
 -(void)cancelRequestWithRequesID:(NSNumber*)requestID;
 -(void)cancelRequestWithRequestList:(NSArray *)requestIDList;
 @end

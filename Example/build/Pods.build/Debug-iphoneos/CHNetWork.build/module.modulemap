@@ -1,0 +1,6 @@
+framework module CHNetWork {
+  umbrella header "CHNetWork-umbrella.h"
+
+  export *
+  module * { export * }
+}

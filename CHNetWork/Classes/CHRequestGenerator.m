@@ -7,6 +7,7 @@
 //
 #import <AFNetworking/AFNetworking.h>
 #import "CHRequestGenerator.h"
+#import "CHNetworkingConfig.h"
 #import "NSURLRequest+CTNetworkingMethods.h"
 @interface CHRequestGenerator()
 @property(nonatomic,strong)AFHTTPRequestSerializer *httpRequestSerializer;
@@ -23,7 +24,8 @@
 }
 -(NSURLRequest *)generatorGETRequestWithParams:(NSDictionary *)params
 {
-    [self.httpRequestSerializer setValue:[[NSUUID UUID]UUIDString] forHTTPHeaderField:@"xx"];
+    
+    [self.httpRequestSerializer setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
     
     NSString *urlString = params[@"url"];
     NSDictionary *paramsdic = params[@"params"];
@@ -38,39 +40,55 @@
 }
 -(NSURLRequest *)generatorPOSTRequestWithParams:(NSDictionary *)params
 {
-    [self.httpRequestSerializer setValue:[[NSUUID UUID]UUIDString] forHTTPHeaderField:@"xxx"];
+    [self.httpRequestSerializer setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"POST" URLString:params[@"url"] parameters:params[@"params"] error:nil];
     NSLog(@"请求URL---->%@",params[@"url"]);
     NSLog(@"请求参数---->%@",params[@"params"]);
     NSLog(@"请求URL+请求参数-------%@",request.URL.absoluteString);
-//    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:params[@"params"] options:0 error:nil];
     request.requestParams = params;
 
     return request;
 }
 -(NSURLRequest *)generatorPUTRequestWithParams:(NSDictionary *)params
 {
-    [self.httpRequestSerializer setValue:[[NSUUID UUID]UUIDString] forHTTPHeaderField:@"xxx"];
+    [self.httpRequestSerializer setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"PUT" URLString:params[@"url"] parameters:params[@"params"] error:nil];
     
-//    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:params[@"params"] options:0 error:nil];
     request.requestParams = params[@"params"];
-    
     return request;
 
 }
 -(NSURLRequest *)generatorDELETERequestWithParams:(NSDictionary *)params
 {
-    [self.httpRequestSerializer setValue:[[NSUUID UUID]UUIDString] forHTTPHeaderField:@"xxx"];
+    [self.httpRequestSerializer setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"DELETE" URLString:params[@"url"] parameters:params[@"params"] error:nil];
     
-//    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:params[@"params"] options:0 error:nil];
     request.requestParams = params[@"params"];
     
     return request;
 
 
 }
+
+- (NSURLRequest *)generatorUploadRequestWithParams:(NSDictionary *)params{
+    [self.httpRequestSerializer setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
+    NSMutableURLRequest *request = [self.httpRequestSerializer multipartFormRequestWithMethod:@"POST" URLString:params[@"url"] parameters:params[@"params"] constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        NSArray *images = params[@"images"];
+        for (int i = 0;i < images.count;i++) {
+            UIImage *image = images[i];
+            NSString *name = [NSString stringWithFormat:@"file%d",i];
+            NSData * data = UIImageJPEGRepresentation(image,1); //将拍下的图片转化成
+            [formData appendPartWithFileData:data name:name fileName:@".jpg" mimeType:@"jpg"];
+        }
+    } error:nil];
+    NSLog(@"请求URL---->%@",params[@"url"]);
+    NSLog(@"请求参数---->%@",params[@"params"]);
+    NSLog(@"请求URL+请求参数-------%@",request.URL.absoluteString);
+    request.requestParams = params;
+    
+    return request;
+}
+
 -(AFHTTPRequestSerializer *)httpRequestSerializer
 {
     if (!_httpRequestSerializer) {

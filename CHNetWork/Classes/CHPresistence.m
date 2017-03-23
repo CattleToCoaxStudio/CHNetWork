@@ -5,7 +5,8 @@
 //
 
 #import "CHPresistence.h"
-static NSTimeInterval CHPresistenceTimeSeconds = 3000;
+#import "CHNetworkingConfig.h"
+static NSTimeInterval CHPresistenceTimeSeconds = 1800;//持久化时间1800秒
 @implementation CHPresistence
 static CHPresistence *shard = nil;
 +(instancetype)shardInstance
@@ -30,24 +31,20 @@ static CHPresistence *shard = nil;
     }
     return self;
 }
+
 -(void)creaeTable
 {
     if ([self.chBase open]) {
-         NSLog(@"打开库成功");
-     BOOL isOk = [self.chBase executeUpdate:@"create table if not exists Presistence (dataKey text primary key,time real,data real)"];
-        
-//      [self.chBase executeUpdate:@"create table if not exists PresistenceTwo (id integer primary key,name text,dataKeyTwo text,CONSTRAINT dataKeyTwo FOREIGN KEY(dataKeyTwo) REFERENCES Presistence(dataKey) ON DELETE CASCADE)"];
-//        [self.chBase executeUpdate:@"PRAGMA foreign_keys=ON;"];
+        NSLog(@"------------打开库成功-------------");
+        BOOL isOk = [self.chBase executeUpdate:@"create table if not exists Presistence (dataKey text primary key,time real,data real)"];
         
         if (isOk) {
-           // NSLog(@"创表成功");
+            NSLog(@"创表成功");
         }else{
-        NSLog(@"创表失败");
-        
+            NSLog(@"创表失败");
         }
     }else{
-        NSLog(@"打开库失败");
-    
+        NSLog(@"----------打开库失败-----------");
     }
 }
 -(void)insertWiht:(NSString *)key andData:(NSData *)data
@@ -100,8 +97,13 @@ static CHPresistence *shard = nil;
 }
 -(BOOL)isOutdatedWith:(NSDate*)date
 {
-    NSTimeInterval tiem = [[NSDate date]timeIntervalSinceDate:date];
-    return tiem < CHPresistenceTimeSeconds;
+    NSTimeInterval time = [[NSDate date]timeIntervalSinceDate:date];
+    return time < [CHNetworkingConfig shardInstance].cacheTime;
     
 }
+//删除表中所有数据
+- (void)deleteTableAllData{
+    [self.chBase executeUpdate:@"delete from Presistence"];
+}
+
 @end

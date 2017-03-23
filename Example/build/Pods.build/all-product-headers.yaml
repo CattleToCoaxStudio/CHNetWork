@@ -1,0 +1,289 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Debug-iphoneos/AFNetworking.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AFAutoPurgingImageCache.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/UIKit+AFNetworking/AFAutoPurgingImageCache.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFHTTPSessionManager.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFImageDownloader.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/UIKit+AFNetworking/AFImageDownloader.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFNetworkActivityIndicatorManager.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFNetworkReachabilityManager.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/AFNetworking/AFNetworkReachabilityManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFNetworking-Swift.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Debug-iphoneos/AFNetworking.framework/Headers/AFNetworking-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFNetworking-umbrella.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/Target Support Files/AFNetworking/AFNetworking-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFNetworking.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/AFNetworking/AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFSecurityPolicy.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/AFNetworking/AFSecurityPolicy.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFURLRequestSerialization.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFURLResponseSerialization.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFURLSessionManager.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIActivityIndicatorView+AFNetworking.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIButton+AFNetworking.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIImage+AFNetworking.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/UIKit+AFNetworking/UIImage+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIImageView+AFNetworking.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIKit+AFNetworking.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/UIKit+AFNetworking/UIKit+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIProgressView+AFNetworking.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/UIKit+AFNetworking/UIProgressView+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIRefreshControl+AFNetworking.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIWebView+AFNetworking.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/AFNetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Debug-iphoneos/AFNetworking.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Pods.build/Debug-iphoneos/AFNetworking.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Debug-iphoneos/CHNetWork.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "CHNetWork-Swift.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Debug-iphoneos/CHNetWork.framework/Headers/CHNetWork-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "CHNetWork-umbrella.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/Target Support Files/CHNetWork/CHNetWork-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Debug-iphoneos/CHNetWork.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Pods.build/Debug-iphoneos/CHNetWork.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Debug-iphoneos/FMDB.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FMDB-Swift.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Debug-iphoneos/FMDB.framework/Headers/FMDB-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FMDB-umbrella.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/Target Support Files/FMDB/FMDB-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "FMDB.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/FMDB/src/fmdb/FMDB.h"
+        },
+        {
+          'type': 'file',
+          'name': "FMDatabase.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/FMDB/src/fmdb/FMDatabase.h"
+        },
+        {
+          'type': 'file',
+          'name': "FMDatabaseAdditions.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/FMDB/src/fmdb/FMDatabaseAdditions.h"
+        },
+        {
+          'type': 'file',
+          'name': "FMDatabasePool.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/FMDB/src/fmdb/FMDatabasePool.h"
+        },
+        {
+          'type': 'file',
+          'name': "FMDatabaseQueue.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/FMDB/src/fmdb/FMDatabaseQueue.h"
+        },
+        {
+          'type': 'file',
+          'name': "FMResultSet.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/FMDB/src/fmdb/FMResultSet.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Debug-iphoneos/FMDB.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Pods.build/Debug-iphoneos/FMDB.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Debug-iphoneos/MJExtension.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "MJExtension-Swift.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Debug-iphoneos/MJExtension.framework/Headers/MJExtension-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "MJExtension-umbrella.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/Target Support Files/MJExtension/MJExtension-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "MJExtension.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/MJExtension/MJExtension/MJExtension.h"
+        },
+        {
+          'type': 'file',
+          'name': "MJExtensionConst.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/MJExtension/MJExtension/MJExtensionConst.h"
+        },
+        {
+          'type': 'file',
+          'name': "MJFoundation.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/MJExtension/MJExtension/MJFoundation.h"
+        },
+        {
+          'type': 'file',
+          'name': "MJProperty.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/MJExtension/MJExtension/MJProperty.h"
+        },
+        {
+          'type': 'file',
+          'name': "MJPropertyKey.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/MJExtension/MJExtension/MJPropertyKey.h"
+        },
+        {
+          'type': 'file',
+          'name': "MJPropertyType.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/MJExtension/MJExtension/MJPropertyType.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSObject+MJClass.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/MJExtension/MJExtension/NSObject+MJClass.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSObject+MJCoding.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/MJExtension/MJExtension/NSObject+MJCoding.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSObject+MJKeyValue.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/MJExtension/MJExtension/NSObject+MJKeyValue.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSObject+MJProperty.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/MJExtension/MJExtension/NSObject+MJProperty.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSString+MJExtension.h",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/Pods/MJExtension/MJExtension/NSString+MJExtension.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Debug-iphoneos/MJExtension.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/admin/Desktop/\u4E09\u65B9/CHNetWork/Example/build/Pods.build/Debug-iphoneos/MJExtension.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

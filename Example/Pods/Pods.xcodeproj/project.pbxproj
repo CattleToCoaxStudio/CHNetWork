@@ -22,41 +22,37 @@
 		2F3D50D472E7946B5CA377C60D238775 /* MJExtensionConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C7DEB52BFE21A103EBE0A1D478FD462 /* MJExtensionConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30AB8F4B01F9119528E291D8115850C0 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B520F276355A6D2D254A1FEF027EE19B /* NSObject+MJProperty.m */; };
 		3463A6E950137DED2D7D6C6A40B6821D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E5175357A0943E45EB7CA0C4D0D0F6 /* Foundation.framework */; };
-		38E833E51DD17A5500871E51 /* CTCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833C21DD17A5500871E51 /* CTCache.h */; };
-		38E833E61DD17A5500871E51 /* CTCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833C31DD17A5500871E51 /* CTCache.m */; };
-		38E833E71DD17A5500871E51 /* CTCachedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833C41DD17A5500871E51 /* CTCachedObject.h */; };
-		38E833E81DD17A5500871E51 /* CTCachedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833C51DD17A5500871E51 /* CTCachedObject.m */; };
-		38E833E91DD17A5500871E51 /* NSArray+AXNetworkingMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833C61DD17A5500871E51 /* NSArray+AXNetworkingMethods.h */; };
-		38E833EA1DD17A5500871E51 /* NSArray+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833C71DD17A5500871E51 /* NSArray+AXNetworkingMethods.m */; };
-		38E833EB1DD17A5500871E51 /* NSDictionary+AXNetworkingMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833C81DD17A5500871E51 /* NSDictionary+AXNetworkingMethods.h */; };
-		38E833EC1DD17A5500871E51 /* NSDictionary+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833C91DD17A5500871E51 /* NSDictionary+AXNetworkingMethods.m */; };
-		38E833ED1DD17A5500871E51 /* NSMutableString+AXNetworkingMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833CA1DD17A5500871E51 /* NSMutableString+AXNetworkingMethods.h */; };
-		38E833EE1DD17A5500871E51 /* NSMutableString+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833CB1DD17A5500871E51 /* NSMutableString+AXNetworkingMethods.m */; };
-		38E833EF1DD17A5500871E51 /* NSObject+AXNetworkingMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833CC1DD17A5500871E51 /* NSObject+AXNetworkingMethods.h */; };
-		38E833F01DD17A5500871E51 /* NSObject+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833CD1DD17A5500871E51 /* NSObject+AXNetworkingMethods.m */; };
-		38E833F11DD17A5500871E51 /* NSString+AXNetworkingMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833CE1DD17A5500871E51 /* NSString+AXNetworkingMethods.h */; };
-		38E833F21DD17A5500871E51 /* NSString+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833CF1DD17A5500871E51 /* NSString+AXNetworkingMethods.m */; };
-		38E833F31DD17A5500871E51 /* NSURLRequest+CTNetworkingMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833D01DD17A5500871E51 /* NSURLRequest+CTNetworkingMethods.h */; };
-		38E833F41DD17A5500871E51 /* NSURLRequest+CTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833D11DD17A5500871E51 /* NSURLRequest+CTNetworkingMethods.m */; };
-		38E833F51DD17A5500871E51 /* UIDevice+IdentifierAddition.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833D21DD17A5500871E51 /* UIDevice+IdentifierAddition.h */; };
-		38E833F61DD17A5500871E51 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833D31DD17A5500871E51 /* UIDevice+IdentifierAddition.m */; };
-		38E833F71DD17A5500871E51 /* CHApiProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833D41DD17A5500871E51 /* CHApiProxy.h */; };
-		38E833F81DD17A5500871E51 /* CHApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833D51DD17A5500871E51 /* CHApiProxy.m */; };
-		38E833F91DD17A5500871E51 /* CHNetworkingConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833D61DD17A5500871E51 /* CHNetworkingConfiguration.h */; };
-		38E833FA1DD17A5500871E51 /* CHPresistence.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833D71DD17A5500871E51 /* CHPresistence.h */; };
-		38E833FB1DD17A5500871E51 /* CHPresistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833D81DD17A5500871E51 /* CHPresistence.m */; };
-		38E833FC1DD17A5500871E51 /* CHRequestGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833D91DD17A5500871E51 /* CHRequestGenerator.h */; };
-		38E833FD1DD17A5500871E51 /* CHRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833DA1DD17A5500871E51 /* CHRequestGenerator.m */; };
-		38E833FE1DD17A5500871E51 /* CHURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833DB1DD17A5500871E51 /* CHURLResponse.h */; };
-		38E833FF1DD17A5500871E51 /* CHURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833DC1DD17A5500871E51 /* CHURLResponse.m */; };
-		38E834001DD17A5500871E51 /* CHNetWorking.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833DD1DD17A5500871E51 /* CHNetWorking.h */; };
-		38E834011DD17A5500871E51 /* CHNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833DE1DD17A5500871E51 /* CHNetWorking.m */; };
-		38E834021DD17A5500871E51 /* FGGReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833DF1DD17A5500871E51 /* FGGReachability.h */; };
-		38E834031DD17A5500871E51 /* FGGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833E01DD17A5500871E51 /* FGGReachability.m */; };
-		38E834041DD17A5500871E51 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833E11DD17A5500871E51 /* Reachability.h */; };
-		38E834051DD17A5500871E51 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833E21DD17A5500871E51 /* Reachability.m */; };
-		38E834061DD17A5500871E51 /* CTUDIDGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E833E31DD17A5500871E51 /* CTUDIDGenerator.h */; };
-		38E834071DD17A5500871E51 /* CTUDIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E833E41DD17A5500871E51 /* CTUDIDGenerator.m */; };
+		382A4BAA1E83B87900D3FEA1 /* CHNetWorking.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4B8B1E83B87900D3FEA1 /* CHNetWorking.h */; };
+		382A4BAB1E83B87900D3FEA1 /* CHNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4B8C1E83B87900D3FEA1 /* CHNetWorking.m */; };
+		382A4BAC1E83B87900D3FEA1 /* CHApiProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4B8D1E83B87900D3FEA1 /* CHApiProxy.h */; };
+		382A4BAD1E83B87900D3FEA1 /* CHApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4B8E1E83B87900D3FEA1 /* CHApiProxy.m */; };
+		382A4BAE1E83B87900D3FEA1 /* CHPresistence.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4B8F1E83B87900D3FEA1 /* CHPresistence.h */; };
+		382A4BAF1E83B87900D3FEA1 /* CHPresistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4B901E83B87900D3FEA1 /* CHPresistence.m */; };
+		382A4BB01E83B87900D3FEA1 /* CHRequestGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4B911E83B87900D3FEA1 /* CHRequestGenerator.h */; };
+		382A4BB11E83B87900D3FEA1 /* CHRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4B921E83B87900D3FEA1 /* CHRequestGenerator.m */; };
+		382A4BB21E83B87900D3FEA1 /* CHURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4B931E83B87900D3FEA1 /* CHURLResponse.h */; };
+		382A4BB31E83B87900D3FEA1 /* CHURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4B941E83B87900D3FEA1 /* CHURLResponse.m */; };
+		382A4BB41E83B87900D3FEA1 /* CTCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4B951E83B87900D3FEA1 /* CTCache.h */; };
+		382A4BB51E83B87900D3FEA1 /* CTCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4B961E83B87900D3FEA1 /* CTCache.m */; };
+		382A4BB61E83B87900D3FEA1 /* CTCachedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4B971E83B87900D3FEA1 /* CTCachedObject.h */; };
+		382A4BB71E83B87900D3FEA1 /* CTCachedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4B981E83B87900D3FEA1 /* CTCachedObject.m */; };
+		382A4BB81E83B87900D3FEA1 /* CTUDIDGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4B991E83B87900D3FEA1 /* CTUDIDGenerator.h */; };
+		382A4BB91E83B87900D3FEA1 /* CTUDIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4B9A1E83B87900D3FEA1 /* CTUDIDGenerator.m */; };
+		382A4BBA1E83B87900D3FEA1 /* CHReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4B9B1E83B87900D3FEA1 /* CHReachability.h */; };
+		382A4BBB1E83B87900D3FEA1 /* CHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4B9C1E83B87900D3FEA1 /* CHReachability.m */; };
+		382A4BBC1E83B87900D3FEA1 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4B9D1E83B87900D3FEA1 /* Reachability.h */; };
+		382A4BBD1E83B87900D3FEA1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4B9E1E83B87900D3FEA1 /* Reachability.m */; };
+		382A4BBE1E83B87900D3FEA1 /* CHNetworkingConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4B9F1E83B87900D3FEA1 /* CHNetworkingConfig.h */; };
+		382A4BBF1E83B87900D3FEA1 /* CHNetworkingConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4BA01E83B87900D3FEA1 /* CHNetworkingConfig.m */; };
+		382A4BC01E83B87900D3FEA1 /* CHNetworkingConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4BA11E83B87900D3FEA1 /* CHNetworkingConfiguration.h */; };
+		382A4BC11E83B87900D3FEA1 /* NSArray+AXNetworkingMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4BA21E83B87900D3FEA1 /* NSArray+AXNetworkingMethods.h */; };
+		382A4BC21E83B87900D3FEA1 /* NSArray+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4BA31E83B87900D3FEA1 /* NSArray+AXNetworkingMethods.m */; };
+		382A4BC31E83B87900D3FEA1 /* NSDictionary+AXNetworkingMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4BA41E83B87900D3FEA1 /* NSDictionary+AXNetworkingMethods.h */; };
+		382A4BC41E83B87900D3FEA1 /* NSDictionary+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4BA51E83B87900D3FEA1 /* NSDictionary+AXNetworkingMethods.m */; };
+		382A4BC51E83B87900D3FEA1 /* NSObject+AXNetworkingMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4BA61E83B87900D3FEA1 /* NSObject+AXNetworkingMethods.h */; };
+		382A4BC61E83B87900D3FEA1 /* NSObject+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4BA71E83B87900D3FEA1 /* NSObject+AXNetworkingMethods.m */; };
+		382A4BC71E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4BA81E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.h */; };
+		382A4BC81E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4BA91E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.m */; };
 		3A10EF6ABF51D1D00B06AC5EF3A8C28C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A1D85AC3FC7C004CB26A77CBE4234B /* SystemConfiguration.framework */; };
 		3B5616131FF68F8A192F3415405D7979 /* Pods-CHNetWork_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93831AF1CC5083005C834FB50BEF317D /* Pods-CHNetWork_Tests-dummy.m */; };
 		3D2789FC760A97301909F0B1201626CD /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50227449E78D87B3C26AC0768A504AA2 /* AFNetworking-dummy.m */; };
@@ -212,42 +208,38 @@
 		316F868DECF84877A82DCC33DD8C1842 /* Pods-CHNetWork_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CHNetWork_Tests-umbrella.h"; sourceTree = "<group>"; };
 		31ACF3B26880D22A0B7873550104E33E /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		328C524D6CE3066F8073D1200B62B2FE /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtension/MJExtension.h; sourceTree = "<group>"; };
+		382A4B8B1E83B87900D3FEA1 /* CHNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHNetWorking.h; sourceTree = "<group>"; };
+		382A4B8C1E83B87900D3FEA1 /* CHNetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHNetWorking.m; sourceTree = "<group>"; };
+		382A4B8D1E83B87900D3FEA1 /* CHApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHApiProxy.h; sourceTree = "<group>"; };
+		382A4B8E1E83B87900D3FEA1 /* CHApiProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHApiProxy.m; sourceTree = "<group>"; };
+		382A4B8F1E83B87900D3FEA1 /* CHPresistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPresistence.h; sourceTree = "<group>"; };
+		382A4B901E83B87900D3FEA1 /* CHPresistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPresistence.m; sourceTree = "<group>"; };
+		382A4B911E83B87900D3FEA1 /* CHRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRequestGenerator.h; sourceTree = "<group>"; };
+		382A4B921E83B87900D3FEA1 /* CHRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRequestGenerator.m; sourceTree = "<group>"; };
+		382A4B931E83B87900D3FEA1 /* CHURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHURLResponse.h; sourceTree = "<group>"; };
+		382A4B941E83B87900D3FEA1 /* CHURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHURLResponse.m; sourceTree = "<group>"; };
+		382A4B951E83B87900D3FEA1 /* CTCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCache.h; sourceTree = "<group>"; };
+		382A4B961E83B87900D3FEA1 /* CTCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCache.m; sourceTree = "<group>"; };
+		382A4B971E83B87900D3FEA1 /* CTCachedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCachedObject.h; sourceTree = "<group>"; };
+		382A4B981E83B87900D3FEA1 /* CTCachedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCachedObject.m; sourceTree = "<group>"; };
+		382A4B991E83B87900D3FEA1 /* CTUDIDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTUDIDGenerator.h; sourceTree = "<group>"; };
+		382A4B9A1E83B87900D3FEA1 /* CTUDIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTUDIDGenerator.m; sourceTree = "<group>"; };
+		382A4B9B1E83B87900D3FEA1 /* CHReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHReachability.h; sourceTree = "<group>"; };
+		382A4B9C1E83B87900D3FEA1 /* CHReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHReachability.m; sourceTree = "<group>"; };
+		382A4B9D1E83B87900D3FEA1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		382A4B9E1E83B87900D3FEA1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		382A4B9F1E83B87900D3FEA1 /* CHNetworkingConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHNetworkingConfig.h; sourceTree = "<group>"; };
+		382A4BA01E83B87900D3FEA1 /* CHNetworkingConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHNetworkingConfig.m; sourceTree = "<group>"; };
+		382A4BA11E83B87900D3FEA1 /* CHNetworkingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHNetworkingConfiguration.h; sourceTree = "<group>"; };
+		382A4BA21E83B87900D3FEA1 /* NSArray+AXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+AXNetworkingMethods.h"; sourceTree = "<group>"; };
+		382A4BA31E83B87900D3FEA1 /* NSArray+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+AXNetworkingMethods.m"; sourceTree = "<group>"; };
+		382A4BA41E83B87900D3FEA1 /* NSDictionary+AXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AXNetworkingMethods.h"; sourceTree = "<group>"; };
+		382A4BA51E83B87900D3FEA1 /* NSDictionary+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AXNetworkingMethods.m"; sourceTree = "<group>"; };
+		382A4BA61E83B87900D3FEA1 /* NSObject+AXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AXNetworkingMethods.h"; sourceTree = "<group>"; };
+		382A4BA71E83B87900D3FEA1 /* NSObject+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AXNetworkingMethods.m"; sourceTree = "<group>"; };
+		382A4BA81E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+CTNetworkingMethods.h"; sourceTree = "<group>"; };
+		382A4BA91E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+CTNetworkingMethods.m"; sourceTree = "<group>"; };
 		386431526D75F95346B1A51C58BEE613 /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
-		38E833C21DD17A5500871E51 /* CTCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCache.h; sourceTree = "<group>"; };
-		38E833C31DD17A5500871E51 /* CTCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCache.m; sourceTree = "<group>"; };
-		38E833C41DD17A5500871E51 /* CTCachedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCachedObject.h; sourceTree = "<group>"; };
-		38E833C51DD17A5500871E51 /* CTCachedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCachedObject.m; sourceTree = "<group>"; };
-		38E833C61DD17A5500871E51 /* NSArray+AXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+AXNetworkingMethods.h"; sourceTree = "<group>"; };
-		38E833C71DD17A5500871E51 /* NSArray+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+AXNetworkingMethods.m"; sourceTree = "<group>"; };
-		38E833C81DD17A5500871E51 /* NSDictionary+AXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AXNetworkingMethods.h"; sourceTree = "<group>"; };
-		38E833C91DD17A5500871E51 /* NSDictionary+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AXNetworkingMethods.m"; sourceTree = "<group>"; };
-		38E833CA1DD17A5500871E51 /* NSMutableString+AXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+AXNetworkingMethods.h"; sourceTree = "<group>"; };
-		38E833CB1DD17A5500871E51 /* NSMutableString+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+AXNetworkingMethods.m"; sourceTree = "<group>"; };
-		38E833CC1DD17A5500871E51 /* NSObject+AXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AXNetworkingMethods.h"; sourceTree = "<group>"; };
-		38E833CD1DD17A5500871E51 /* NSObject+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AXNetworkingMethods.m"; sourceTree = "<group>"; };
-		38E833CE1DD17A5500871E51 /* NSString+AXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AXNetworkingMethods.h"; sourceTree = "<group>"; };
-		38E833CF1DD17A5500871E51 /* NSString+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AXNetworkingMethods.m"; sourceTree = "<group>"; };
-		38E833D01DD17A5500871E51 /* NSURLRequest+CTNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+CTNetworkingMethods.h"; sourceTree = "<group>"; };
-		38E833D11DD17A5500871E51 /* NSURLRequest+CTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+CTNetworkingMethods.m"; sourceTree = "<group>"; };
-		38E833D21DD17A5500871E51 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
-		38E833D31DD17A5500871E51 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
-		38E833D41DD17A5500871E51 /* CHApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHApiProxy.h; sourceTree = "<group>"; };
-		38E833D51DD17A5500871E51 /* CHApiProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHApiProxy.m; sourceTree = "<group>"; };
-		38E833D61DD17A5500871E51 /* CHNetworkingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHNetworkingConfiguration.h; sourceTree = "<group>"; };
-		38E833D71DD17A5500871E51 /* CHPresistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPresistence.h; sourceTree = "<group>"; };
-		38E833D81DD17A5500871E51 /* CHPresistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPresistence.m; sourceTree = "<group>"; };
-		38E833D91DD17A5500871E51 /* CHRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRequestGenerator.h; sourceTree = "<group>"; };
-		38E833DA1DD17A5500871E51 /* CHRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRequestGenerator.m; sourceTree = "<group>"; };
-		38E833DB1DD17A5500871E51 /* CHURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHURLResponse.h; sourceTree = "<group>"; };
-		38E833DC1DD17A5500871E51 /* CHURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHURLResponse.m; sourceTree = "<group>"; };
-		38E833DD1DD17A5500871E51 /* CHNetWorking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHNetWorking.h; sourceTree = "<group>"; };
-		38E833DE1DD17A5500871E51 /* CHNetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHNetWorking.m; sourceTree = "<group>"; };
-		38E833DF1DD17A5500871E51 /* FGGReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGGReachability.h; sourceTree = "<group>"; };
-		38E833E01DD17A5500871E51 /* FGGReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGGReachability.m; sourceTree = "<group>"; };
-		38E833E11DD17A5500871E51 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		38E833E21DD17A5500871E51 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		38E833E31DD17A5500871E51 /* CTUDIDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTUDIDGenerator.h; sourceTree = "<group>"; };
-		38E833E41DD17A5500871E51 /* CTUDIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTUDIDGenerator.m; sourceTree = "<group>"; };
 		3C59D5F7FD837199AB6A78A301E30B72 /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C61A8F4DC80F88991635955CCFDC0AD /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
 		3C7DEB52BFE21A103EBE0A1D478FD462 /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
@@ -527,41 +519,37 @@
 		57DD7EDFDAD7D5D5A2ED2DCA6A080178 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				38E833C21DD17A5500871E51 /* CTCache.h */,
-				38E833C31DD17A5500871E51 /* CTCache.m */,
-				38E833C41DD17A5500871E51 /* CTCachedObject.h */,
-				38E833C51DD17A5500871E51 /* CTCachedObject.m */,
-				38E833C61DD17A5500871E51 /* NSArray+AXNetworkingMethods.h */,
-				38E833C71DD17A5500871E51 /* NSArray+AXNetworkingMethods.m */,
-				38E833C81DD17A5500871E51 /* NSDictionary+AXNetworkingMethods.h */,
-				38E833C91DD17A5500871E51 /* NSDictionary+AXNetworkingMethods.m */,
-				38E833CA1DD17A5500871E51 /* NSMutableString+AXNetworkingMethods.h */,
-				38E833CB1DD17A5500871E51 /* NSMutableString+AXNetworkingMethods.m */,
-				38E833CC1DD17A5500871E51 /* NSObject+AXNetworkingMethods.h */,
-				38E833CD1DD17A5500871E51 /* NSObject+AXNetworkingMethods.m */,
-				38E833CE1DD17A5500871E51 /* NSString+AXNetworkingMethods.h */,
-				38E833CF1DD17A5500871E51 /* NSString+AXNetworkingMethods.m */,
-				38E833D01DD17A5500871E51 /* NSURLRequest+CTNetworkingMethods.h */,
-				38E833D11DD17A5500871E51 /* NSURLRequest+CTNetworkingMethods.m */,
-				38E833D21DD17A5500871E51 /* UIDevice+IdentifierAddition.h */,
-				38E833D31DD17A5500871E51 /* UIDevice+IdentifierAddition.m */,
-				38E833D41DD17A5500871E51 /* CHApiProxy.h */,
-				38E833D51DD17A5500871E51 /* CHApiProxy.m */,
-				38E833D61DD17A5500871E51 /* CHNetworkingConfiguration.h */,
-				38E833D71DD17A5500871E51 /* CHPresistence.h */,
-				38E833D81DD17A5500871E51 /* CHPresistence.m */,
-				38E833D91DD17A5500871E51 /* CHRequestGenerator.h */,
-				38E833DA1DD17A5500871E51 /* CHRequestGenerator.m */,
-				38E833DB1DD17A5500871E51 /* CHURLResponse.h */,
-				38E833DC1DD17A5500871E51 /* CHURLResponse.m */,
-				38E833DD1DD17A5500871E51 /* CHNetWorking.h */,
-				38E833DE1DD17A5500871E51 /* CHNetWorking.m */,
-				38E833DF1DD17A5500871E51 /* FGGReachability.h */,
-				38E833E01DD17A5500871E51 /* FGGReachability.m */,
-				38E833E11DD17A5500871E51 /* Reachability.h */,
-				38E833E21DD17A5500871E51 /* Reachability.m */,
-				38E833E31DD17A5500871E51 /* CTUDIDGenerator.h */,
-				38E833E41DD17A5500871E51 /* CTUDIDGenerator.m */,
+				382A4B8B1E83B87900D3FEA1 /* CHNetWorking.h */,
+				382A4B8C1E83B87900D3FEA1 /* CHNetWorking.m */,
+				382A4B8D1E83B87900D3FEA1 /* CHApiProxy.h */,
+				382A4B8E1E83B87900D3FEA1 /* CHApiProxy.m */,
+				382A4B8F1E83B87900D3FEA1 /* CHPresistence.h */,
+				382A4B901E83B87900D3FEA1 /* CHPresistence.m */,
+				382A4B911E83B87900D3FEA1 /* CHRequestGenerator.h */,
+				382A4B921E83B87900D3FEA1 /* CHRequestGenerator.m */,
+				382A4B931E83B87900D3FEA1 /* CHURLResponse.h */,
+				382A4B941E83B87900D3FEA1 /* CHURLResponse.m */,
+				382A4B951E83B87900D3FEA1 /* CTCache.h */,
+				382A4B961E83B87900D3FEA1 /* CTCache.m */,
+				382A4B971E83B87900D3FEA1 /* CTCachedObject.h */,
+				382A4B981E83B87900D3FEA1 /* CTCachedObject.m */,
+				382A4B991E83B87900D3FEA1 /* CTUDIDGenerator.h */,
+				382A4B9A1E83B87900D3FEA1 /* CTUDIDGenerator.m */,
+				382A4B9B1E83B87900D3FEA1 /* CHReachability.h */,
+				382A4B9C1E83B87900D3FEA1 /* CHReachability.m */,
+				382A4B9D1E83B87900D3FEA1 /* Reachability.h */,
+				382A4B9E1E83B87900D3FEA1 /* Reachability.m */,
+				382A4B9F1E83B87900D3FEA1 /* CHNetworkingConfig.h */,
+				382A4BA01E83B87900D3FEA1 /* CHNetworkingConfig.m */,
+				382A4BA11E83B87900D3FEA1 /* CHNetworkingConfiguration.h */,
+				382A4BA21E83B87900D3FEA1 /* NSArray+AXNetworkingMethods.h */,
+				382A4BA31E83B87900D3FEA1 /* NSArray+AXNetworkingMethods.m */,
+				382A4BA41E83B87900D3FEA1 /* NSDictionary+AXNetworkingMethods.h */,
+				382A4BA51E83B87900D3FEA1 /* NSDictionary+AXNetworkingMethods.m */,
+				382A4BA61E83B87900D3FEA1 /* NSObject+AXNetworkingMethods.h */,
+				382A4BA71E83B87900D3FEA1 /* NSObject+AXNetworkingMethods.m */,
+				382A4BA81E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.h */,
+				382A4BA91E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -779,21 +767,37 @@
 			files = (
 				CAC483EF637FB4A2C2E2FC75BA631B87 /* AFAutoPurgingImageCache.h in Headers */,
 				AB39AC9746E7575D7449700475E41B0B /* AFHTTPSessionManager.h in Headers */,
+				382A4BBA1E83B87900D3FEA1 /* CHReachability.h in Headers */,
 				5808B477EFF509D810B5CDCFDC944F80 /* AFImageDownloader.h in Headers */,
+				382A4BC31E83B87900D3FEA1 /* NSDictionary+AXNetworkingMethods.h in Headers */,
+				382A4BC71E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.h in Headers */,
+				382A4BAA1E83B87900D3FEA1 /* CHNetWorking.h in Headers */,
 				1480F4923DBBF217F60572EEECB4027C /* AFNetworkActivityIndicatorManager.h in Headers */,
 				EC7CADE416A78A1CD6936018A6695126 /* AFNetworking-umbrella.h in Headers */,
 				E7988678C81F7CCB95D239375FC6986D /* AFNetworking.h in Headers */,
 				68152D921ABF6A423C192C04FDF94F0F /* AFNetworkReachabilityManager.h in Headers */,
+				382A4BC51E83B87900D3FEA1 /* NSObject+AXNetworkingMethods.h in Headers */,
 				C2DD28375E1F0B1D0D1D2E4E607C499F /* AFSecurityPolicy.h in Headers */,
+				382A4BB41E83B87900D3FEA1 /* CTCache.h in Headers */,
+				382A4BAE1E83B87900D3FEA1 /* CHPresistence.h in Headers */,
+				382A4BB21E83B87900D3FEA1 /* CHURLResponse.h in Headers */,
+				382A4BC01E83B87900D3FEA1 /* CHNetworkingConfiguration.h in Headers */,
 				20EE8030FCF2402DAC7F1C9B9DDAEF79 /* AFURLRequestSerialization.h in Headers */,
 				7332F15718920917F544F35CE2C038AA /* AFURLResponseSerialization.h in Headers */,
 				560698A4D707DCBCC1C8F98BC9B89B23 /* AFURLSessionManager.h in Headers */,
 				1E5B8F12ED7CC40ECDB9B1F755F387E5 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
+				382A4BB01E83B87900D3FEA1 /* CHRequestGenerator.h in Headers */,
+				382A4BC11E83B87900D3FEA1 /* NSArray+AXNetworkingMethods.h in Headers */,
+				382A4BB81E83B87900D3FEA1 /* CTUDIDGenerator.h in Headers */,
 				81B617F8D26BB10C5726D75E85D21EB7 /* UIButton+AFNetworking.h in Headers */,
 				9E1E90DED74B73ECE53C9AD76DE53E2D /* UIImage+AFNetworking.h in Headers */,
 				60E3009342BEE96D32C546BE2DB60052 /* UIImageView+AFNetworking.h in Headers */,
+				382A4BB61E83B87900D3FEA1 /* CTCachedObject.h in Headers */,
+				382A4BBE1E83B87900D3FEA1 /* CHNetworkingConfig.h in Headers */,
 				659960F7E28E993E08CCC1E8A383E710 /* UIKit+AFNetworking.h in Headers */,
+				382A4BBC1E83B87900D3FEA1 /* Reachability.h in Headers */,
 				D9F4E833E37B611B432F6B5D7072DDA2 /* UIProgressView+AFNetworking.h in Headers */,
+				382A4BAC1E83B87900D3FEA1 /* CHApiProxy.h in Headers */,
 				C6354FEC7728A4C86DAD8092509BA7D4 /* UIRefreshControl+AFNetworking.h in Headers */,
 				AE2A07407FB50BA249984DC0620E84C0 /* UIWebView+AFNetworking.h in Headers */,
 			);
@@ -803,25 +807,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38E833E51DD17A5500871E51 /* CTCache.h in Headers */,
-				38E833FA1DD17A5500871E51 /* CHPresistence.h in Headers */,
-				38E833F31DD17A5500871E51 /* NSURLRequest+CTNetworkingMethods.h in Headers */,
-				38E833ED1DD17A5500871E51 /* NSMutableString+AXNetworkingMethods.h in Headers */,
-				38E833EB1DD17A5500871E51 /* NSDictionary+AXNetworkingMethods.h in Headers */,
 				F826985F7049D959965A066D600157B5 /* CHNetWork-umbrella.h in Headers */,
-				38E833F11DD17A5500871E51 /* NSString+AXNetworkingMethods.h in Headers */,
-				38E833F71DD17A5500871E51 /* CHApiProxy.h in Headers */,
-				38E833EF1DD17A5500871E51 /* NSObject+AXNetworkingMethods.h in Headers */,
-				38E834041DD17A5500871E51 /* Reachability.h in Headers */,
-				38E833F91DD17A5500871E51 /* CHNetworkingConfiguration.h in Headers */,
-				38E834001DD17A5500871E51 /* CHNetWorking.h in Headers */,
-				38E833E71DD17A5500871E51 /* CTCachedObject.h in Headers */,
-				38E834021DD17A5500871E51 /* FGGReachability.h in Headers */,
-				38E833E91DD17A5500871E51 /* NSArray+AXNetworkingMethods.h in Headers */,
-				38E833F51DD17A5500871E51 /* UIDevice+IdentifierAddition.h in Headers */,
-				38E834061DD17A5500871E51 /* CTUDIDGenerator.h in Headers */,
-				38E833FE1DD17A5500871E51 /* CHURLResponse.h in Headers */,
-				38E833FC1DD17A5500871E51 /* CHRequestGenerator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -955,21 +941,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382A4BBD1E83B87900D3FEA1 /* Reachability.m in Sources */,
 				3F1BC9BAFFEEABB1ABC7614DF0FC97D5 /* AFAutoPurgingImageCache.m in Sources */,
 				E0D4045AC4C1B41917FCA23A042D18B2 /* AFHTTPSessionManager.m in Sources */,
 				CFA8D6B529A0EBFF0316F2629AB2556E /* AFImageDownloader.m in Sources */,
 				A6C6019D45BE62C61210A9CC619368EF /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3D2789FC760A97301909F0B1201626CD /* AFNetworking-dummy.m in Sources */,
+				382A4BBF1E83B87900D3FEA1 /* CHNetworkingConfig.m in Sources */,
 				68A38977EBAE334DC3C22386D00D2622 /* AFNetworkReachabilityManager.m in Sources */,
+				382A4BC81E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.m in Sources */,
+				382A4BB71E83B87900D3FEA1 /* CTCachedObject.m in Sources */,
+				382A4BAB1E83B87900D3FEA1 /* CHNetWorking.m in Sources */,
+				382A4BB91E83B87900D3FEA1 /* CTUDIDGenerator.m in Sources */,
+				382A4BB51E83B87900D3FEA1 /* CTCache.m in Sources */,
 				20607BE2B1E5F31765026E5AC64DB27D /* AFSecurityPolicy.m in Sources */,
 				DFFA215EEAA8DDBD540076927535275C /* AFURLRequestSerialization.m in Sources */,
 				B5852322ADE88AAD56EE042B80BA81E4 /* AFURLResponseSerialization.m in Sources */,
+				382A4BC61E83B87900D3FEA1 /* NSObject+AXNetworkingMethods.m in Sources */,
+				382A4BAD1E83B87900D3FEA1 /* CHApiProxy.m in Sources */,
+				382A4BC21E83B87900D3FEA1 /* NSArray+AXNetworkingMethods.m in Sources */,
 				707B1A7541C8DBDDE8C27896A61370BE /* AFURLSessionManager.m in Sources */,
 				6ED4ABEE8A5F51F5ECB59FA1781D29C6 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				AF03C11A1FAC8132AD3749D8F541701A /* UIButton+AFNetworking.m in Sources */,
+				382A4BAF1E83B87900D3FEA1 /* CHPresistence.m in Sources */,
 				2E8A32ED46194EDBE22146271F6D26DE /* UIImageView+AFNetworking.m in Sources */,
 				5FF6453E55785669885F626B853FD2AA /* UIProgressView+AFNetworking.m in Sources */,
+				382A4BBB1E83B87900D3FEA1 /* CHReachability.m in Sources */,
 				174202BD6AE0E4A41F5CE66E975EAE52 /* UIRefreshControl+AFNetworking.m in Sources */,
+				382A4BC41E83B87900D3FEA1 /* NSDictionary+AXNetworkingMethods.m in Sources */,
+				382A4BB11E83B87900D3FEA1 /* CHRequestGenerator.m in Sources */,
+				382A4BB31E83B87900D3FEA1 /* CHURLResponse.m in Sources */,
 				A462945883F7729B185B64B679A6BFBE /* UIWebView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -986,24 +987,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38E833F01DD17A5500871E51 /* NSObject+AXNetworkingMethods.m in Sources */,
-				38E834031DD17A5500871E51 /* FGGReachability.m in Sources */,
-				38E834071DD17A5500871E51 /* CTUDIDGenerator.m in Sources */,
-				38E833F21DD17A5500871E51 /* NSString+AXNetworkingMethods.m in Sources */,
-				38E833EA1DD17A5500871E51 /* NSArray+AXNetworkingMethods.m in Sources */,
-				38E833EC1DD17A5500871E51 /* NSDictionary+AXNetworkingMethods.m in Sources */,
-				38E833F61DD17A5500871E51 /* UIDevice+IdentifierAddition.m in Sources */,
-				38E833FF1DD17A5500871E51 /* CHURLResponse.m in Sources */,
-				38E833E81DD17A5500871E51 /* CTCachedObject.m in Sources */,
-				38E833FB1DD17A5500871E51 /* CHPresistence.m in Sources */,
-				38E833FD1DD17A5500871E51 /* CHRequestGenerator.m in Sources */,
 				F8CE94B2222F50BE73260425D9C56CE7 /* CHNetWork-dummy.m in Sources */,
-				38E833EE1DD17A5500871E51 /* NSMutableString+AXNetworkingMethods.m in Sources */,
-				38E833E61DD17A5500871E51 /* CTCache.m in Sources */,
-				38E833F81DD17A5500871E51 /* CHApiProxy.m in Sources */,
-				38E834011DD17A5500871E51 /* CHNetWorking.m in Sources */,
-				38E833F41DD17A5500871E51 /* NSURLRequest+CTNetworkingMethods.m in Sources */,
-				38E834051DD17A5500871E51 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

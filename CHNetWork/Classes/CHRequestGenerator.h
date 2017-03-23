@@ -14,5 +14,5 @@
 -(NSURLRequest*)generatorPOSTRequestWithParams:(NSDictionary*)params;
 -(NSURLRequest*)generatorPUTRequestWithParams:(NSDictionary*)params;
 -(NSURLRequest*)generatorDELETERequestWithParams:(NSDictionary*)params;
-
+-(NSURLRequest*)generatorUploadRequestWithParams:(NSDictionary*)params;
 @end

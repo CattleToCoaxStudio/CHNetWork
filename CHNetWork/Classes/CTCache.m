@@ -8,8 +8,7 @@
 
 #import "CTCache.h"
 #import "NSDictionary+AXNetworkingMethods.h"
-//#import "CTNetworkingConfiguration.h"
-static NSUInteger kCTCacheCountLimit = 1000; // 最多1000条cache
+static NSUInteger kCTCacheCountLimit = 100; // 最多100条cache
 @interface CTCache ()
 
 @property (nonatomic, strong) NSCache *cache;
@@ -64,9 +63,9 @@ static NSUInteger kCTCacheCountLimit = 1000; // 最多1000条cache
 - (NSData *)fetchCachedDataWithKey:(NSString *)key
 {
     CTCachedObject *cachedObject = [self.cache objectForKey:key];
-    if (cachedObject.isOutdated || cachedObject.isEmpty) {
+    if(cachedObject.isOutdated || cachedObject.isEmpty) {
         return nil;
-    } else {
+    }else{
         return cachedObject.content;
     }
 }
