@@ -53,6 +53,8 @@
 		382A4BC61E83B87900D3FEA1 /* NSObject+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4BA71E83B87900D3FEA1 /* NSObject+AXNetworkingMethods.m */; };
 		382A4BC71E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4BA81E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.h */; };
 		382A4BC81E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4BA91E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.m */; };
+		382A4BCB1E83BC3900D3FEA1 /* CoatingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A4BC91E83BC3900D3FEA1 /* CoatingView.h */; };
+		382A4BCC1E83BC3900D3FEA1 /* CoatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A4BCA1E83BC3900D3FEA1 /* CoatingView.m */; };
 		3A10EF6ABF51D1D00B06AC5EF3A8C28C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A1D85AC3FC7C004CB26A77CBE4234B /* SystemConfiguration.framework */; };
 		3B5616131FF68F8A192F3415405D7979 /* Pods-CHNetWork_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93831AF1CC5083005C834FB50BEF317D /* Pods-CHNetWork_Tests-dummy.m */; };
 		3D2789FC760A97301909F0B1201626CD /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50227449E78D87B3C26AC0768A504AA2 /* AFNetworking-dummy.m */; };
@@ -239,6 +241,8 @@
 		382A4BA71E83B87900D3FEA1 /* NSObject+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AXNetworkingMethods.m"; sourceTree = "<group>"; };
 		382A4BA81E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+CTNetworkingMethods.h"; sourceTree = "<group>"; };
 		382A4BA91E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+CTNetworkingMethods.m"; sourceTree = "<group>"; };
+		382A4BC91E83BC3900D3FEA1 /* CoatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoatingView.h; sourceTree = "<group>"; };
+		382A4BCA1E83BC3900D3FEA1 /* CoatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoatingView.m; sourceTree = "<group>"; };
 		386431526D75F95346B1A51C58BEE613 /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
 		3C59D5F7FD837199AB6A78A301E30B72 /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C61A8F4DC80F88991635955CCFDC0AD /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
@@ -521,6 +525,8 @@
 			children = (
 				382A4B8B1E83B87900D3FEA1 /* CHNetWorking.h */,
 				382A4B8C1E83B87900D3FEA1 /* CHNetWorking.m */,
+				382A4BC91E83BC3900D3FEA1 /* CoatingView.h */,
+				382A4BCA1E83BC3900D3FEA1 /* CoatingView.m */,
 				382A4B8D1E83B87900D3FEA1 /* CHApiProxy.h */,
 				382A4B8E1E83B87900D3FEA1 /* CHApiProxy.m */,
 				382A4B8F1E83B87900D3FEA1 /* CHPresistence.h */,
@@ -768,6 +774,7 @@
 				CAC483EF637FB4A2C2E2FC75BA631B87 /* AFAutoPurgingImageCache.h in Headers */,
 				AB39AC9746E7575D7449700475E41B0B /* AFHTTPSessionManager.h in Headers */,
 				382A4BBA1E83B87900D3FEA1 /* CHReachability.h in Headers */,
+				382A4BCB1E83BC3900D3FEA1 /* CoatingView.h in Headers */,
 				5808B477EFF509D810B5CDCFDC944F80 /* AFImageDownloader.h in Headers */,
 				382A4BC31E83B87900D3FEA1 /* NSDictionary+AXNetworkingMethods.h in Headers */,
 				382A4BC71E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.h in Headers */,
@@ -949,6 +956,7 @@
 				3D2789FC760A97301909F0B1201626CD /* AFNetworking-dummy.m in Sources */,
 				382A4BBF1E83B87900D3FEA1 /* CHNetworkingConfig.m in Sources */,
 				68A38977EBAE334DC3C22386D00D2622 /* AFNetworkReachabilityManager.m in Sources */,
+				382A4BCC1E83BC3900D3FEA1 /* CoatingView.m in Sources */,
 				382A4BC81E83B87900D3FEA1 /* NSURLRequest+CTNetworkingMethods.m in Sources */,
 				382A4BB71E83B87900D3FEA1 /* CTCachedObject.m in Sources */,
 				382A4BAB1E83B87900D3FEA1 /* CHNetWorking.m in Sources */,

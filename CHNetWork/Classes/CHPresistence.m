@@ -6,7 +6,7 @@
 
 #import "CHPresistence.h"
 #import "CHNetworkingConfig.h"
-static NSTimeInterval CHPresistenceTimeSeconds = 1800;//持久化时间1800秒
+//static NSTimeInterval CHPresistenceTimeSeconds = 1800;//持久化时间1800秒
 @implementation CHPresistence
 static CHPresistence *shard = nil;
 +(instancetype)shardInstance
