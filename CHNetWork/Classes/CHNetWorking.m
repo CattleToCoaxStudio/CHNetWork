@@ -14,6 +14,7 @@
 #import "AFNetworkReachabilityManager.h"
 #import "CHPresistence.h"
 #import "CHReachability.h"
+
 /* (1)这个宏里面用sefl而没用weakSelf是因为，Controller里用的类方法调用，而不是实例在调。
  * (2)因为在调[CHApiProxy shardInstance]这里面的方法时，是这里[self alloc]创建的一个实例在调用
  * 当这个方法调用完返回一个ID值用就没有强引用在指向[self alloc]它了，它就会被释放掉。在DataTask
