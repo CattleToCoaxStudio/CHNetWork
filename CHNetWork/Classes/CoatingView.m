@@ -7,6 +7,7 @@
 //
 #import "CoatingView.h"
 
+#define Window0  ((UIWindow*)[[[UIApplication sharedApplication] windows] objectAtIndex:0])
 @interface CoatingView ()
 @property (nonatomic,retain) UIView *rootView;
 

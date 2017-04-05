@@ -68,7 +68,7 @@
 {
     [self initNativeDataBase];
     if (![delegate respondsToSelector:@selector(ch_startAccessTheNetwork:)]) {
-//        [CoatingView showCoatingView];
+        [CoatingView showCoatingView];
     }
     return  [[self alloc] ch_GetRequestWithDeleagteTarget:delegate
                                 andRequestType:type
@@ -80,7 +80,7 @@
 +(NSURLSessionDataTask *)ch_UploadTaskWithDeleagteTarget:(id)delegate andRequestType:(NetWorkingRequestType)type andClass:(Class)modelClass andIsPersistence:(BOOL)Persistence andNumber:(NSInteger)requestNumber{
     [self initNativeDataBase];
     if (![delegate respondsToSelector:@selector(ch_startAccessTheNetwork:)]) {
-//        [CoatingView showCoatingView];
+        [CoatingView showCoatingView];
     }
     return  [[self alloc] ch_UploadTaskWithDeleagteTarget:delegate
                                            andRequestType:type
@@ -207,7 +207,7 @@
 {
     //这里取消网络菊花
     if (![self.delegate respondsToSelector:@selector(ch_endAccessTheNetwork:)]) {
-//        [CoatingView stopActivity];
+        [CoatingView stopActivity];
     }
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
@@ -236,7 +236,7 @@
 {
     //这里取消网络菊花
     if (![self.delegate respondsToSelector:@selector(ch_endAccessTheNetwork:)]) {
-//        [CoatingView stopActivity];
+        [CoatingView stopActivity];
     }
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     self.response = response;
