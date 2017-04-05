@@ -10,7 +10,7 @@
 #import "CHURLResponse.h"
 #import <UIKit/UIKit.h>
 #import "CHNetworkingConfig.h"
-#import "CoatingView.h"
+//#import "CoatingView.h"
 
 #define CHNetWorkingRequest(delegate,requestType,mdoelClass,isCache,requestNumber) [CHNetWorking ch_GetRequestWithDeleagteTarget:delegate andRequestType:requestType andClass:mdoelClass andIsPersistence:isCache andNumber:requestNumber]
 
