@@ -9,17 +9,20 @@
 CHNetwork是基于AFNetworking二次封装的，CHNetwork提供了以下功能：
 - 支持按时间缓存网络请求内容
     ```
+    设置缓存时间 单位秒（s）：
     [CHNetworkingConfig shardInstance].cacheTime = 1800;
     ```
 - 支持设置httpRequest header
     ```
+    在请求头里加入token：
     [[CHNetworkingConfig shardInstance] httpRequestSetValue:@"token" forHTTPHeaderField:@"token"];
     ```
 - 暂只支持delegate回调的方式
 - 支持网络状态判断（在网络请求失败的情况，可以根据返回状态提示用户）
 - 支持在统一的方法里设置loading页面（如果不重载该方法将加载默认loading页面）
     ```
-    回调方法如下
+    回调方法如下：
+
     配置请求参数
     -(NSDictionary *)ch_paramWith:(CHNetWorking *)manager;
     请求成功回调
@@ -47,8 +50,62 @@ CHNetwork是基于AFNetworking二次封装的，CHNetwork提供了以下功能�
 
 - 支持对get请求参数编码
 ## Example
+```
+网络
+[CHNetWorking ch_GetRequestWithDeleagteTarget:self andRequestType:CHAPIManagerRequestTypeGet andClass:[CoreObject_PostsTip class] andIsPersistence:NO andNumber:1];
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+/**
+网络请求 参数配置代理
+
+@param manager manager
+@return 参数配置回调方法
+*/
+- (NSDictionary *)ch_paramWith:(CHNetWorking *)manager{
+
+if (manager.requestNumber == 1) {
+    //获取首页数据
+    return @{@"url":LoadTipList,@"params":@{@"appId":DEVICEUUID,@"page":StringValue(_startIndex),@"rows":StringValue(_pageSize)}};
+}else if (manager.requestNumber == 2){
+    //更新读取状态
+    return @{@"url":UpdateReadStatu,@"params":@{@"tipId":_tipId}};
+}
+    return nil;
+}
+
+/**
+网络请求成功回调
+
+@param manager manager
+*/
+- (void)ch_requestCallAPISuccess:(CHNetWorking *)manager{
+
+    if ([manager.response.content[@"status"] intValue] != 1) {
+        [XHToast showCenterWithText:manager.response.content[@"msg"]];
+    }else{
+        if (manager.requestNumber == 1) {
+            
+        }else if(manager.requestNumber == 2){
+            
+        }
+        [self.tableView reloadData];
+    }
+}
+
+
+/**
+网络请求失败回调
+
+@param manager manager
+*/
+- (void)ch_requestCallApiFail:(CHNetWorking *)manager{
+    [XHToast showBottomWithText:@"网络错误!"];
+}
+
+//网络请求开始和结束回调
+CHNetworkingStart  
+CHNetworkingEnd
+
+```
 
 ## Requirements
 
