@@ -54,11 +54,31 @@ typedef NS_ENUM(NSInteger,NetWorkingRequestType)
 
 @interface CHNetWorking : NSObject
 @property(nonatomic,weak)id<CHNetWorkingDelegate> delegate;
+
+/**
+ response
+ */
 @property(nonatomic,strong)CHURLResponse *response;
+
+/**
+ 用于标记该请求
+ */
 @property(nonatomic,assign)NSInteger requestNumber;
+
+/**
+ 模型class
+ */
 @property(nonatomic,assign)Class modeClass;
 @property(nonatomic,strong) id model;
+
+/**
+ 请求方式
+ */
 @property(nonatomic,assign)NetWorkingRequestType requestType;
+
+/**
+ 是否缓存该请求内容
+ */
 @property(nonatomic,assign)BOOL isPersistence;
 @property(nonatomic,assign)BOOL isCache;
 @property(nonatomic,assign,readonly)BOOL isReachable;
