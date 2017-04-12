@@ -5,17 +5,21 @@
 [![License](https://img.shields.io/cocoapods/l/CHNetWork.svg?style=flat)](http://cocoapods.org/pods/CHNetWork)
 [![Platform](https://img.shields.io/cocoapods/p/CHNetWork.svg?style=flat)](http://cocoapods.org/pods/CHNetWork)
 
-##CHNetwork提供的功能
+## CHNetwork提供的功能
 CHNetwork是基于AFNetworking二次封装的，CHNetwork提供了以下功能：
 - 支持按时间缓存网络请求内容
-    `[CHNetworkingConfig shardInstance].cacheTime = 1800;`
+    ```
+    [CHNetworkingConfig shardInstance].cacheTime = 1800;
+    ```
 - 支持设置httpRequest header
-    `[[CHNetworkingConfig shardInstance] httpRequestSetValue:@"token" forHTTPHeaderField:@"token"];`
+    ```
+    [[CHNetworkingConfig shardInstance] httpRequestSetValue:@"token" forHTTPHeaderField:@"token"];
+    ```
 - 暂只支持delegate回调的方式
 - 支持网络状态判断（在网络请求失败的情况，可以根据返回状态提示用户）
 - 支持在统一的方法里设置loading页面（如果不重载该方法将加载默认loading页面）
-    回调方法如下
     ```
+    回调方法如下
     配置请求参数
     -(NSDictionary *)ch_paramWith:(CHNetWorking *)manager;
     请求成功回调
@@ -42,7 +46,6 @@ CHNetwork是基于AFNetworking二次封装的，CHNetwork提供了以下功能�
     ```
 
 - 支持对get请求参数编码
-    对特殊字符进行转码
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
