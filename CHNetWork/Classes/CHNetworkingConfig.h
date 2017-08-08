@@ -12,6 +12,12 @@
 
 +(instancetype)shardInstance;
 
+
+/**
+ 模型转换时取的键(默认@"data")
+ */
+@property (nonatomic, copy) NSString *dataKey;
+
 /**
  域名  该版本不用设置
  */
@@ -40,5 +46,8 @@
  @param headerKey 键
  */
 - (void)httpRequestSetValue:(NSString *)headerValue forHTTPHeaderField:(NSString *)headerKey;
+
+
+
 
 @end

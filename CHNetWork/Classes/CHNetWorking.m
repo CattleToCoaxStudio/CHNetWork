@@ -69,6 +69,8 @@
     [self initNativeDataBase];
     if (![delegate respondsToSelector:@selector(ch_startAccessTheNetwork:)]) {
         [CoatingView showCoatingView];
+    }else{
+        [delegate ch_startAccessTheNetwork:self];
     }
     return  [[self alloc] ch_GetRequestWithDeleagteTarget:delegate
                                 andRequestType:type
@@ -81,6 +83,8 @@
     [self initNativeDataBase];
     if (![delegate respondsToSelector:@selector(ch_startAccessTheNetwork:)]) {
         [CoatingView showCoatingView];
+    }else{
+        [delegate ch_startAccessTheNetwork:self];
     }
     return  [[self alloc] ch_UploadTaskWithDeleagteTarget:delegate
                                            andRequestType:type
@@ -208,6 +212,8 @@
     //这里取消网络菊花
     if (![self.delegate respondsToSelector:@selector(ch_endAccessTheNetwork:)]) {
         [CoatingView stopActivity];
+    }else{
+        [self.delegate ch_endAccessTheNetwork:self];
     }
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
@@ -237,6 +243,8 @@
     //这里取消网络菊花
     if (![self.delegate respondsToSelector:@selector(ch_endAccessTheNetwork:)]) {
         [CoatingView stopActivity];
+    }else{
+        [self.delegate ch_endAccessTheNetwork:self];
     }
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     self.response = response;
@@ -256,8 +264,7 @@
             }else{
                 
                 if ([self.delegate respondsToSelector:@selector(ch_requestCallAPISuccess:)]) {
-                    //根据业务需要  这里data下套data字段
-//                    id object = [NSJSONSerialization JSONObjectWithData:[data[@"data"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments | NSJSONReadingMutableLeaves | NSJSONReadingMutableContainers error:nil];
+                    //根据业务需要  可以在CHNetworkingConfig文件配置需要模型转换对应的key
                     id object = data[@"data"];
                     id model;
                     if ([object isKindOfClass:[NSArray class]]) {

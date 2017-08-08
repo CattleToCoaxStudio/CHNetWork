@@ -29,6 +29,7 @@
         _cacheTime = 1800;
         _headerKey = @"";
         _headerValue = @"";
+        _dataKey = @"data";
     }
     return self;
 }

@@ -25,13 +25,13 @@
 -(NSURLRequest *)generatorGETRequestWithParams:(NSDictionary *)params
 {
     
-    [self.httpRequestSerializer setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
+    [[AFHTTPRequestSerializer serializer] setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
     
     NSString *urlString = params[@"url"];
     NSDictionary *paramsdic = params[@"params"];
     NSLog(@"请求URL---->%@",urlString);
     NSLog(@"请求参数---->%@",paramsdic);
-    NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:urlString parameters:paramsdic error:nil];
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:urlString parameters:paramsdic error:nil];
     NSLog(@"请求URL+请求参数-------%@",request.URL.absoluteString);
     request.requestParams = params;
    
@@ -40,8 +40,8 @@
 }
 -(NSURLRequest *)generatorPOSTRequestWithParams:(NSDictionary *)params
 {
-    [self.httpRequestSerializer setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
-    NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"POST" URLString:params[@"url"] parameters:params[@"params"] error:nil];
+    [[AFHTTPRequestSerializer serializer] setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:params[@"url"] parameters:params[@"params"] error:nil];
     NSLog(@"请求URL---->%@",params[@"url"]);
     NSLog(@"请求参数---->%@",params[@"params"]);
     NSLog(@"请求URL+请求参数-------%@",request.URL.absoluteString);
@@ -51,8 +51,8 @@
 }
 -(NSURLRequest *)generatorPUTRequestWithParams:(NSDictionary *)params
 {
-    [self.httpRequestSerializer setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
-    NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"PUT" URLString:params[@"url"] parameters:params[@"params"] error:nil];
+    [[AFHTTPRequestSerializer serializer] setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"PUT" URLString:params[@"url"] parameters:params[@"params"] error:nil];
     
     request.requestParams = params[@"params"];
     return request;
@@ -60,8 +60,8 @@
 }
 -(NSURLRequest *)generatorDELETERequestWithParams:(NSDictionary *)params
 {
-    [self.httpRequestSerializer setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
-    NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"DELETE" URLString:params[@"url"] parameters:params[@"params"] error:nil];
+    [[AFHTTPRequestSerializer serializer] setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"DELETE" URLString:params[@"url"] parameters:params[@"params"] error:nil];
     
     request.requestParams = params[@"params"];
     
@@ -71,8 +71,8 @@
 }
 
 - (NSURLRequest *)generatorUploadRequestWithParams:(NSDictionary *)params{
-    [self.httpRequestSerializer setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
-    NSMutableURLRequest *request = [self.httpRequestSerializer multipartFormRequestWithMethod:@"POST" URLString:params[@"url"] parameters:params[@"params"] constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [[AFHTTPRequestSerializer serializer] setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:params[@"url"] parameters:params[@"params"] constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSArray *images = params[@"images"];
         for (int i = 0;i < images.count;i++) {
             UIImage *image = images[i];
