@@ -265,7 +265,8 @@
                 
                 if ([self.delegate respondsToSelector:@selector(ch_requestCallAPISuccess:)]) {
                     //根据业务需要  可以在CHNetworkingConfig文件配置需要模型转换对应的key
-                    id object = data[@"data"];
+                    
+                    id object = data[[CHNetworkingConfig shardInstance].dataKey];
                     id model;
                     if ([object isKindOfClass:[NSArray class]]) {
                         model = [self.modeClass mj_objectArrayWithKeyValuesArray:object];

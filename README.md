@@ -58,7 +58,7 @@ CHNetwork是基于AFNetworking二次封装的，CHNetwork提供了以下功能�
 
     在CHNetWorking类里，在成功拿到数据后，取的data字段进行模型转换。
     如果data是数组：传入的模型是它里面的对象模型，返回的就是一个该模型的数组
-
+    其中@"data"字段可在CHNetworkingConfig文件配置
     [CHNetWorking ch_GetRequestWithDeleagteTarget:self andRequestType:CHAPIManagerRequestTypeGet andClass:[CoreObject_PostsTip class] andIsPersistence:NO andNumber:1];
     ```
 
