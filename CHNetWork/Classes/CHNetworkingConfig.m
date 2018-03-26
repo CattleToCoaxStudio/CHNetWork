@@ -30,6 +30,7 @@
         _headerKey = @"";
         _headerValue = @"";
         _dataKey = @"data";
+        _requestType = 1;
     }
     return self;
 }

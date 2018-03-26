@@ -12,7 +12,10 @@
 
 +(instancetype)shardInstance;
 
-
+/**
+ 1 json 2http
+ */
+@property (nonatomic, assign) NSInteger requestType;
 /**
  模型转换时取的键(默认@"data")
  */
