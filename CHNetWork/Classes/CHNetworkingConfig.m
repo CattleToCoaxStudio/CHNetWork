@@ -27,17 +27,14 @@
     if (self) {
         _baseUrl = @"";
         _cacheTime = 1800;
-        _headerKey = @"";
-        _headerValue = @"";
         _dataKey = @"data";
-        _requestType = 1;
+        _requestType = CHJsonRequest;
+        _encryptType = 0;
+        _headerDic = @{};
+        _commonParams = @{};
     }
     return self;
 }
 
-- (void)httpRequestSetValue:(NSString *)headerValue forHTTPHeaderField:(NSString *)headerKey{
-    _headerKey = headerKey;
-    _headerValue = headerValue;
-}
 
 @end

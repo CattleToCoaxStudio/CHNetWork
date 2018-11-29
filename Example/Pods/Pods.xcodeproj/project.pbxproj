@@ -82,6 +82,8 @@
 		7F4ADD1B79016FFAAD89ECA518DE7B22 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 24944936E3B53D58BB8FFFA17C58E1C8 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		809DBB28053F56297C07E69F3F245945 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E5175357A0943E45EB7CA0C4D0D0F6 /* Foundation.framework */; };
 		81B617F8D26BB10C5726D75E85D21EB7 /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 12CF5B5CF2E7CCA09E3A7562A83C1E51 /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84AC2DA021AF8DF200AA727C /* NSData+CHEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 84AC2D9E21AF8DF200AA727C /* NSData+CHEncrypt.h */; };
+		84AC2DA121AF8DF200AA727C /* NSData+CHEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AC2D9F21AF8DF200AA727C /* NSData+CHEncrypt.m */; };
 		89A6990ABDEA8A5B69DB93D8D5F91FC1 /* Pods-CHNetWork_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 316F868DECF84877A82DCC33DD8C1842 /* Pods-CHNetWork_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A233C6156A7C46E06EAF5BF09D472BB /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = B171E1E7D3E2234269F40EE4D26F1353 /* MJPropertyKey.m */; };
 		9B6715DE41F527FDC529DFE80B687318 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5783EB783B28C1C97A46CFCB41F74F29 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -275,6 +277,8 @@
 		7A4FC9B523DF0D1539043B408F563276 /* MJPropertyType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyType.m; path = MJExtension/MJPropertyType.m; sourceTree = "<group>"; };
 		7CF37E6AAFA36EDCA861D38E1FCDAC9F /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
 		8419EC946D4C6BCC76F272CC457915DB /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
+		84AC2D9E21AF8DF200AA727C /* NSData+CHEncrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+CHEncrypt.h"; sourceTree = "<group>"; };
+		84AC2D9F21AF8DF200AA727C /* NSData+CHEncrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+CHEncrypt.m"; sourceTree = "<group>"; };
 		8F8B892C373AAD42814A4DA0D28CB28E /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
 		93831AF1CC5083005C834FB50BEF317D /* Pods-CHNetWork_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CHNetWork_Tests-dummy.m"; sourceTree = "<group>"; };
 		9CEB1122FF7CD37FABB5E676824F12CF /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
@@ -556,6 +560,8 @@
 				38A567991E94E2990055330C /* NSObject+AXNetworkingMethods.m */,
 				38A5679A1E94E2990055330C /* NSURLRequest+CTNetworkingMethods.h */,
 				38A5679B1E94E2990055330C /* NSURLRequest+CTNetworkingMethods.m */,
+				84AC2D9E21AF8DF200AA727C /* NSData+CHEncrypt.h */,
+				84AC2D9F21AF8DF200AA727C /* NSData+CHEncrypt.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -814,6 +820,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AC2DA021AF8DF200AA727C /* NSData+CHEncrypt.h in Headers */,
 				F826985F7049D959965A066D600157B5 /* CHNetWork-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -996,6 +1003,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8CE94B2222F50BE73260425D9C56CE7 /* CHNetWork-dummy.m in Sources */,
+				84AC2DA121AF8DF200AA727C /* NSData+CHEncrypt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

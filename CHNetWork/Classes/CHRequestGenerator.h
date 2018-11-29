@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+
+
 @interface CHRequestGenerator : NSObject
 +(instancetype)shardInstance;
 -(NSURLRequest*)generatorGETRequestWithParams:(NSDictionary*)params;

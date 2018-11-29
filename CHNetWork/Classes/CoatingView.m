@@ -31,13 +31,13 @@
     [self defaultCoating].rootView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
     [self defaultCoating].rootView.center = CGPointMake([self defaultCoating].center.x, [self defaultCoating].center.y);
     [self defaultCoating].rootView.layer.cornerRadius = 6;
-    [self defaultCoating].rootView.backgroundColor = [UIColor blackColor];
-    [self defaultCoating].rootView.alpha = 0.7;
+    [self defaultCoating].rootView.backgroundColor = [UIColor whiteColor];
+    [self defaultCoating].rootView.alpha = 0.9;
     [[self defaultCoating] addSubview:[self defaultCoating].rootView];
     
     [self defaultCoating].activityView = [[ UIActivityIndicatorView alloc ]
                          initWithFrame:CGRectMake(20,10,30.0,30.0)];
-    [self defaultCoating].activityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
+    [self defaultCoating].activityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
     //        self.activityView.hidesWhenStopped = NO;
     [self defaultCoating].activityView.center = [self defaultCoating].rootView.center;
     [[self defaultCoating] addSubview:[self defaultCoating].activityView];
