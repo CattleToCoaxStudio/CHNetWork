@@ -9,6 +9,7 @@
 #import "CHRequestGenerator.h"
 #import "CHNetworkingConfig.h"
 #import "NSURLRequest+CTNetworkingMethods.h"
+#import "NSData+CHEncrypt.h"
 @interface CHRequestGenerator()
 @property(nonatomic,strong) AFHTTPRequestSerializer *httpRequestSerializer;
 @end
@@ -25,16 +26,11 @@
 
 -(NSURLRequest *)generatorGETRequestWithParams:(NSDictionary *)params
 {
-    
-    //    [[self httpRequestSerializer] setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
-    //    NSLog(@"---%@==%@",[CHNetworkingConfig shardInstance].headerKey,[CHNetworkingConfig shardInstance].headerValue);
-    
     NSString *urlString = params[@"url"];
-    id paramsdic = params[@"params"];
     NSLog(@"请求URL---->%@",urlString);
-    NSLog(@"请求参数---->%@",paramsdic);
-    NSMutableURLRequest *request = [[self httpRequestSerializer] requestWithMethod:@"GET" URLString:urlString parameters:params[@"params"] error:nil];
-    [request setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
+    
+    NSMutableURLRequest *request = [[self httpRequestSerializer] requestWithMethod:@"GET" URLString:urlString parameters:[self getValidParams:params[@"params"]] error:nil];
+    [self setRequestHeader:request];
     NSLog(@"请求URL+请求参数-------%@",request.URL.absoluteString);
     request.requestParams = params;
     
@@ -44,10 +40,9 @@
 -(NSURLRequest *)generatorPOSTRequestWithParams:(NSDictionary *)params
 {
     
-    NSMutableURLRequest *request = [[self httpRequestSerializer] requestWithMethod:@"POST" URLString:params[@"url"] parameters:params[@"params"] error:nil];
-    [request setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
+    NSMutableURLRequest *request = [[self httpRequestSerializer] requestWithMethod:@"POST" URLString:params[@"url"] parameters:[self getValidParams:params[@"params"]] error:nil];
+    [self setRequestHeader:request];
     NSLog(@"请求URL---->%@",params[@"url"]);
-    NSLog(@"请求参数---->%@",params[@"params"]);
     NSLog(@"请求URL+请求参数-------%@",request.URL.absoluteString);
     request.requestParams = params;
     
@@ -56,16 +51,16 @@
 -(NSURLRequest *)generatorPUTRequestWithParams:(NSDictionary *)params
 {
     
-    NSMutableURLRequest *request = [[self httpRequestSerializer] requestWithMethod:@"PUT" URLString:params[@"url"] parameters:params[@"params"] error:nil];
-    [request setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
+    NSMutableURLRequest *request = [[self httpRequestSerializer] requestWithMethod:@"PUT" URLString:params[@"url"] parameters:[self getValidParams:params[@"params"]] error:nil];
+    [self setRequestHeader:request];
     request.requestParams = params[@"params"];
     return request;
     
 }
 -(NSURLRequest *)generatorDELETERequestWithParams:(NSDictionary *)params
 {
-    NSMutableURLRequest *request = [[self httpRequestSerializer] requestWithMethod:@"DELETE" URLString:params[@"url"] parameters:params[@"params"] error:nil];
-    [request setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
+    NSMutableURLRequest *request = [[self httpRequestSerializer] requestWithMethod:@"DELETE" URLString:params[@"url"] parameters:[self getValidParams:params[@"params"]] error:nil];
+    [self setRequestHeader:request];
     request.requestParams = params[@"params"];
     
     return request;
@@ -74,25 +69,45 @@
 }
 
 - (NSURLRequest *)generatorUploadRequestWithParams:(NSDictionary *)params{
-    [[self httpRequestSerializer] setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
-    NSMutableURLRequest *request = [[self httpRequestSerializer] multipartFormRequestWithMethod:@"POST" URLString:params[@"url"] parameters:params[@"params"] constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    
+    NSMutableURLRequest *request = [[self httpRequestSerializer] multipartFormRequestWithMethod:@"POST" URLString:params[@"url"] parameters:[self getValidParams:params[@"params"]] constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSArray *images = params[@"images"];
-        for (int i = 0;i < images.count;i++) {
+        for (int i = 0;i < (int)images.count;i++) {
             UIImage *image = images[i];
-            NSString *name = [NSString stringWithFormat:@"file%d",i];
-            NSData * data = UIImageJPEGRepresentation(image,1); //将拍下的图片转化成
-            [formData appendPartWithFileData:data name:name fileName:@".jpg" mimeType:@"jpg"];
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"yyyyMMddHHmmss"];
+            NSString *dateString = [formatter stringFromDate:[NSDate date]];
+            NSString *fileName = [NSString  stringWithFormat:@"%@.jpg", dateString];
+            NSData * data = UIImageJPEGRepresentation(image,0.5);
+            /*
+             *该方法的参数
+             1. appendPartWithFileData：要上传的照片[二进制流]
+             2. name：对应网站上[upload.php中]处理文件的字段（比如upload）
+             3. fileName：要保存在服务器上的文件名
+             4. mimeType：上传的文件的类型
+             */
+            [formData appendPartWithFileData:data name:@"images[]" fileName:fileName mimeType:@"image/jpeg"];
         }
     } error:nil];
     NSLog(@"请求URL---->%@",params[@"url"]);
-    NSLog(@"请求参数---->%@",params[@"params"]);
     NSLog(@"请求URL+请求参数-------%@",request.URL.absoluteString);
     request.requestParams = params;
-    [request setValue:[CHNetworkingConfig shardInstance].headerValue forHTTPHeaderField:[CHNetworkingConfig shardInstance].headerKey];
+    [self setRequestHeader:request];
     return request;
 }
 
--(AFHTTPRequestSerializer *)httpRequestSerializer
+- (void)setRequestHeader:(NSMutableURLRequest *)request{
+    
+        NSDictionary *headerDic = [CHNetworkingConfig shardInstance].headerDic;
+        for (int i= 0; i < headerDic.allKeys.count; i ++) {
+            NSString *value = [headerDic valueForKey:headerDic.allKeys[i]];
+            NSString *key = headerDic.allKeys[i];
+            [request setValue:value forHTTPHeaderField:key];
+        }
+//        [request setValue:[NSString stringWithFormat:@"%.0lf",[self nowTimeInterval]] forHTTPHeaderField:@"timestamp"];
+}
+
+- (AFHTTPRequestSerializer *)httpRequestSerializer
 {
     if (!_httpRequestSerializer) {
         
@@ -111,5 +126,44 @@
     }
     return _httpRequestSerializer;
 }
+
+- (NSTimeInterval)nowTimeInterval{
+    NSDate *nowDate = [NSDate date];
+    NSTimeInterval time = [nowDate timeIntervalSince1970] * 1000;
+    return time;
+}
+
+- (NSDictionary *)getValidParams:(NSDictionary *)param{
+    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:param];
+    NSDictionary *commonDic = [CHNetworkingConfig shardInstance].commonParams;
+    
+    for (int i= 0; i < (int)commonDic.allKeys.count; i ++) {
+        NSString *value = [commonDic valueForKey:commonDic.allKeys[i]];
+        NSString *key = commonDic.allKeys[i];
+        [dic setObject:value forKey:key];
+    }
+    if ([CHNetworkingConfig shardInstance].encryptType == 0) {
+        return [dic copy];
+    }
+    NSLog(@"请求参数---->%@",dic);
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+//    NSString *jsonString = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    NSData *encrypted = [data ch_encryptedWith3DESUsingKey:[CHNetworkingConfig shardInstance].secretKey andIV:[[CHNetworkingConfig shardInstance].offset dataUsingEncoding:NSUTF8StringEncoding]];
+    NSString *baseDESStr = [encrypted ch_base64EncodedString];
+    NSMutableDictionary *paramDic = [NSMutableDictionary dictionary];
+    for (int i= 0; i < (int)commonDic.allKeys.count; i ++) {
+        NSString *value = [commonDic valueForKey:commonDic.allKeys[i]];
+        NSString *key = commonDic.allKeys[i];
+        [paramDic setObject:value forKey:key];
+    }
+//    if ([CHNetworkingConfig shardInstance].token) {
+//        NSString *token = [CHNetworkingConfig shardInstance].token;
+//        [paramDic setValue:token forKey:@"token"];
+//    }
+    [paramDic setObject:baseDESStr forKey:[CHNetworkingConfig shardInstance].dataKey];
+    NSLog(@"加密后请求参数---->%@",paramDic);
+    return [paramDic copy];
+}
+
 
 @end
