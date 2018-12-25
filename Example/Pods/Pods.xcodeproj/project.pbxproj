@@ -55,6 +55,8 @@
 		38A567BA1E94E2990055330C /* NSObject+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A567991E94E2990055330C /* NSObject+AXNetworkingMethods.m */; };
 		38A567BB1E94E2990055330C /* NSURLRequest+CTNetworkingMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A5679A1E94E2990055330C /* NSURLRequest+CTNetworkingMethods.h */; };
 		38A567BC1E94E2990055330C /* NSURLRequest+CTNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A5679B1E94E2990055330C /* NSURLRequest+CTNetworkingMethods.m */; };
+		38FB59FD21D28EDD000BC9E9 /* NSData+CHEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FB59FB21D28EDD000BC9E9 /* NSData+CHEncrypt.h */; };
+		38FB59FE21D28EDD000BC9E9 /* NSData+CHEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FB59FC21D28EDD000BC9E9 /* NSData+CHEncrypt.m */; };
 		3A10EF6ABF51D1D00B06AC5EF3A8C28C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A1D85AC3FC7C004CB26A77CBE4234B /* SystemConfiguration.framework */; };
 		3B5616131FF68F8A192F3415405D7979 /* Pods-CHNetWork_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93831AF1CC5083005C834FB50BEF317D /* Pods-CHNetWork_Tests-dummy.m */; };
 		3D2789FC760A97301909F0B1201626CD /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50227449E78D87B3C26AC0768A504AA2 /* AFNetworking-dummy.m */; };
@@ -244,6 +246,8 @@
 		38A567991E94E2990055330C /* NSObject+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AXNetworkingMethods.m"; sourceTree = "<group>"; };
 		38A5679A1E94E2990055330C /* NSURLRequest+CTNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+CTNetworkingMethods.h"; sourceTree = "<group>"; };
 		38A5679B1E94E2990055330C /* NSURLRequest+CTNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+CTNetworkingMethods.m"; sourceTree = "<group>"; };
+		38FB59FB21D28EDD000BC9E9 /* NSData+CHEncrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+CHEncrypt.h"; sourceTree = "<group>"; };
+		38FB59FC21D28EDD000BC9E9 /* NSData+CHEncrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+CHEncrypt.m"; sourceTree = "<group>"; };
 		3C59D5F7FD837199AB6A78A301E30B72 /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C61A8F4DC80F88991635955CCFDC0AD /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
 		3C7DEB52BFE21A103EBE0A1D478FD462 /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
@@ -556,6 +560,8 @@
 				38A567991E94E2990055330C /* NSObject+AXNetworkingMethods.m */,
 				38A5679A1E94E2990055330C /* NSURLRequest+CTNetworkingMethods.h */,
 				38A5679B1E94E2990055330C /* NSURLRequest+CTNetworkingMethods.m */,
+				38FB59FB21D28EDD000BC9E9 /* NSData+CHEncrypt.h */,
+				38FB59FC21D28EDD000BC9E9 /* NSData+CHEncrypt.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -782,6 +788,7 @@
 				1480F4923DBBF217F60572EEECB4027C /* AFNetworkActivityIndicatorManager.h in Headers */,
 				EC7CADE416A78A1CD6936018A6695126 /* AFNetworking-umbrella.h in Headers */,
 				E7988678C81F7CCB95D239375FC6986D /* AFNetworking.h in Headers */,
+				38FB59FD21D28EDD000BC9E9 /* NSData+CHEncrypt.h in Headers */,
 				38A567B01E94E2990055330C /* Reachability.h in Headers */,
 				68152D921ABF6A423C192C04FDF94F0F /* AFNetworkReachabilityManager.h in Headers */,
 				C2DD28375E1F0B1D0D1D2E4E607C499F /* AFSecurityPolicy.h in Headers */,
@@ -972,6 +979,7 @@
 				38A567A11E94E2990055330C /* CHApiProxy.m in Sources */,
 				38A567BA1E94E2990055330C /* NSObject+AXNetworkingMethods.m in Sources */,
 				6ED4ABEE8A5F51F5ECB59FA1781D29C6 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				38FB59FE21D28EDD000BC9E9 /* NSData+CHEncrypt.m in Sources */,
 				38A567BC1E94E2990055330C /* NSURLRequest+CTNetworkingMethods.m in Sources */,
 				AF03C11A1FAC8132AD3749D8F541701A /* UIButton+AFNetworking.m in Sources */,
 				2E8A32ED46194EDBE22146271F6D26DE /* UIImageView+AFNetworking.m in Sources */,

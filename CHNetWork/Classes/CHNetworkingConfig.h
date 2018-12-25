@@ -7,6 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef NS_ENUM(NSInteger,CHRequestType){
+    CHJsonRequest = 1,
+    CHHttpRequest = 2
+};
+
+typedef NS_ENUM(NSInteger,CHEncryptType){
+    CHEncryptType3DES = 1,
+    CHEncryptTypeAES = 2
+};
 
 @interface CHNetworkingConfig : NSObject
 
@@ -15,7 +24,12 @@
 /**
  1 json 2http
  */
-@property (nonatomic, assign) NSInteger requestType;
+@property (nonatomic, assign) CHRequestType requestType;
+
+/**
+ 加密算法  默认不加密
+ */
+@property (nonatomic, assign) CHEncryptType encryptType;
 /**
  模型转换时取的键(默认@"data")
  */
@@ -31,25 +45,27 @@
  */
 @property (nonatomic, assign) NSTimeInterval cacheTime;
 
+/**
+  往request header 里面添加的键值对
+ */
+@property (nonatomic, retain) NSDictionary *headerDic;
 
 /**
- 加入请求头 键
+ 公共参数
  */
-@property (nonatomic, copy) NSString *headerKey;
+@property (nonatomic, retain) NSDictionary *commonParams;
+
+@property (nonatomic, copy) NSString *token;
 
 /**
- 加入请求头 值
+ 加密秘钥
  */
-@property (nonatomic, copy) NSString *headerValue;
+@property (nonatomic, copy) NSString *secretKey;
 
 /**
- 设置请求头(和上面的属性配置选一种)
-
- @param headerValue 值
- @param headerKey 键
+ 加密偏移量
  */
-- (void)httpRequestSetValue:(NSString *)headerValue forHTTPHeaderField:(NSString *)headerKey;
-
+@property (nonatomic, copy) NSString *offset;
 
 
 
