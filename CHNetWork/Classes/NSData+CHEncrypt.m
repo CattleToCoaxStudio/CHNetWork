@@ -7,7 +7,8 @@
 
 #import "NSData+CHEncrypt.h"
 #import <CommonCrypto/CommonCryptor.h>
-
+#import <Security/Security.h>
+#import <CommonCrypto/CommonDigest.h> 
 @implementation NSData (CHEncrypt)
 
 /**
