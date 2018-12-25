@@ -8,6 +8,7 @@
 #import "NSData+CHEncrypt.h"
 #pragma GCC diagnostic ignored "-Wselector"
 #import <Availability.h>
+#import <CommonCrypto/CommonCryptor.h>
 
 @implementation NSData (CHEncrypt)
 
